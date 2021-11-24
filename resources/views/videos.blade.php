@@ -556,289 +556,109 @@
 				</div>
 			</div>
 			<div id="bc">
+				<style></style>
 				<style>
-				/*.headtop { background: #f6f5f5; color:#666; } .hicon.dark, .hicon { border-color:#888; color: #666; }*/
+				.vImg {
+					padding-bottom: 60%;
+					background-position: center center;
+					background-size: cover;
+				}
+				
+				.vImg:before {
+					position: absolute;
+					content: " ";
+					top: 50%;
+					left: 50%;
+					height: 50px;
+					width: 50px;
+					margin-left: -25px;
+					margin-top: -25px;
+					background: URL('https://www.beacdn.com/play_button.png') scroll no-repeat center center/contain;
+				}
+				
+				.vTit {
+					margin-top: 5px;
+					font-weight: bold;
+					line-height: 20px;
+					height: 40px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					color: #000;
+					text-transform: uppercase;
+					font-size: 1rem;
+				}
 				</style>
-				<div id="header" style="background: URL('https://www.lozaty.com/s/i/bg.jpg') scroll repeat center center/cover; padding: 100px 0px; padding-top: 141px;direction: ltr;">
+				<div id="header" style="background: URL('https://www.lozaty.com/s/i/bg.jpg') scroll repeat center center/cover; direction: ltr; padding: 100px 0px; padding-top: 141px;">
 					<div class="pa w100 flipHoriz" style="left: 0px; top: 0px; max-width: 600px; height: 240px; background: URL('https://www.lozaty.com/s/i/hbgl.png') scroll no-repeat left top/contain;"></div>
-					<div class=ov style="background: rgba(255,255,255,0.2);"></div><span class=fh><div class=pageTit><h3>Contact Us</h3></div><nav aria-label="breadcrumb"><ol class="breadcrumb site-breadcumb-1 justify-content-center"><li class="breadcrumb-item"><a href="https://www.lozaty.com/">Home</a></li><li class="breadcrumb-item active" aria-current="page">Contact Us</li></ol></nav></span></div>
-				<style>
-				#map {
-					height: 400px;
-					background: #ededed;
-				}
-				
-				.main_tit {
-					font-size: 20px;
-					color: #3e3e3e;
-					line-height: 45px;
-					font-weight: bold;
-					top: 10px;
-				}
-				
-				.main_txt {
-					font-size: 18px;
-					color: #666;
-					top: 10px;
-				}
-				
-				.frm2 {
-					background: transparent;
-					border: none;
-					color: #180c68;
-					width: 100%;
-				}
-				
-				.rinput::placeholder {
-					color: rgba(0, 0, 0, .3);
-				}
-				
-				.rinput {
-					border: 1px rgba(0, 0, 0, .2) solid;
-					border-radius: 3px;
-					line-height: 45px;
-					padding: 0px 10px;
-					color: #180c68;
-					font-size: 14px;
-					height: 45px;
-					width: 100%;
-				}
-				
-				.rinput:focus {
-					border-color: rgb(24, 10, 106);
-				}
-				
-				.c_btn_primary {
-					color: #fff;
-					background: #81729C;
-					border: none;
-					font-size: 13px;
-					line-height: 45px;
-					width: 100%;
-					border-radius: 3px;
-				}
-				
-				.contact_icons {
-					font-size: 50px;
-					color: #81729C;
-				}
-				
-				.contact_info {
-					font-size: 19px;
-					color: #3e3e3e;
-					font-weight: bold;
-				}
-				
-				.contact_txt {
-					font-size: 15px;
-					color: rgba(0, 0, 0, .4);
-				}
-				
-				#submit:hover,
-				#submit:focus {
-					background: rgba(24, 10, 106, 0.7);
-				}
-				
-				.ln {
-					left: -80px;
-				}
-				
-				@media all and (max-width: 768px) {
-					.ln {
-						left: 0;
-					}
-				}
-				</style>
+					<div class=ov style="background: rgba(255,255,255,0.2);"></div><span class=fh><div class=pageTit><h3>Videos</h3></div><nav aria-label="breadcrumb"><ol class="breadcrumb site-breadcumb-1 justify-content-center"><li class="breadcrumb-item"><a href="https://www.lozaty.com/">Home</a></li><li class="breadcrumb-item active" aria-current="page">Videos</li></ol></nav></span></div>
 				<div style="background: #81729C; height: 4px;"></div>
-				<section style="background: #fff; padding: 50px 0px;">
+				<div class=pv50>
 					<div class=flexi style="direction: ltr;">
-						<div class=tit>Contact Us</div>
-						<div class="g_nm sep mt20"></div>
-						<br>
-						<div class="txt mt10 c g_nm w50 m_w100">
-							<div class="tbl">
-								<div class=row>
-									<div class="col w40 vt c fh">
-										<div class="mt50 m_mt0"><font class="fa fa-phone contact_icons"></font>
-											<div class="mt10 contact_info">000000000000000</div>
-											<div class="mt5 contact_txt">Customer Service</div>
-										</div>
-										<div class="mt50 m_mt0"><font class="fa fa-map-marker contact_icons"></font>
-											<div class="mt10 contact_info">Address 12345</div>
-											<div class="mt5 contact_txt">Address</div>
+						<div class="g w80 m_w100 l">
+							<div class="tit">Videos</div>
+							<div class="sep g_nm"></div>
+							<div class="mt50 m_mt20 c">
+								<div class=tbl style="direction: ltr;">
+									<div class=row>
+										<div class="col c vt">
+											<iframe frameborder="0" id="ifex" data-id="7C3hrEdXaXM" src="https://www.youtube.com/embed/7C3hrEdXaXM?autoplay=1&amp;modestbranding=1&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;color=blue&amp;vq=hd720&amp;enablejsapi=1" height="450" scrolling="no" width="100%"></iframe>
 										</div>
 									</div>
-									<div class="col w50 vt">
-										<div class="main_tit m_mt60 l m_c">Contact Us</div>
-										<div class="main_txt l m_c"></div>
-										<div class="mt30">
-											<form id="contForm" method="post">
-												<div class=tbl>
-													<div class=row>
-														<div class="col w50">
-															<div class="frm2">
-																<input class="rinput ez-f" type="text" name="Name" id="Name" value="" title="Name" placeholder="Name.." />
-															</div>
-														</div>
-														<div class="col" style="min-width: 10px; width: 10px;"></div>
-														<div class="col w50 l">
-															<div class="frm2 m_mt10">
-																<input class="rinput ez-f" type="Email" name="Email" id="Email" value="" title="Email Address" placeholder="Email Address.." />
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="frm2 mt10">
-													<input class="rinput ez-f" type="Subject" name="Subject" id="Subject" value="" title="Subject" placeholder="Subject.." />
-												</div>
-												<div class="frm2 mt10" style="">
-													<textarea class="rinput ez-f" name="Message" id="Message" placeholder="Message.." style="color: #606060; height: 140px; font-size: 15px; padding: 10px; line-height: 20px; background: transparent; outline: none; display: block; margin-top: 10px; resize: none;"></textarea>
-												</div>
-												<div class="mt10 l m_l">
-													<button id="submit" type="submit" class="pointer c_btn_primary ez-f" data-action="Send" data-loading="Loading...">Send</button>
-												</div>
-											</form>
+								</div>
+								<div class="sTxt mt40 fs0 l" style="margin:-5px;">
+									<div class="g_nm w33 md_w50 m_w100">
+										<div style="margin:5px;" class="vBox pointer" vid="rD5xlDGN3Os">
+											<div class="vImg" style="background-image: URL('https://i.ytimg.com/vi/rD5xlDGN3Os/mqdefault.jpg');"></div>
+											<div class=vTit>Video 1</div>
+										</div>
+									</div>
+									<div class="g_nm w33 md_w50 m_w100">
+										<div style="margin:5px;" class="vBox pointer" vid="c7mUHNTAPmc">
+											<div class="vImg" style="background-image: URL('https://i.ytimg.com/vi/c7mUHNTAPmc/mqdefault.jpg');"></div>
+											<div class=vTit>Video 2</div>
+										</div>
+									</div>
+									<div class="g_nm w33 md_w50 m_w100">
+										<div style="margin:5px;" class="vBox pointer" vid="GDBFkaoQ1tA">
+											<div class="vImg" style="background-image: URL('https://i.ytimg.com/vi/GDBFkaoQ1tA/mqdefault.jpg');"></div>
+											<div class=vTit>Video 3</div>
+										</div>
+									</div>
+									<div class="g_nm w33 md_w50 m_w100">
+										<div style="margin:5px;" class="vBox pointer" vid="sY2XGfk0D9Y">
+											<div class="vImg" style="background-image: URL('https://i.ytimg.com/vi/sY2XGfk0D9Y/mqdefault.jpg');"></div>
+											<div class=vTit>Video 4</div>
+										</div>
+									</div>
+									<div class="g_nm w33 md_w50 m_w100">
+										<div style="margin:5px;" class="vBox pointer" vid="dxlh1BbO3XQ">
+											<div class="vImg" style="background-image: URL('https://i.ytimg.com/vi/dxlh1BbO3XQ/mqdefault.jpg');"></div>
+											<div class=vTit>Video 5</div>
+										</div>
+									</div>
+									<div class="g_nm w33 md_w50 m_w100">
+										<div style="margin:5px;" class="vBox pointer" vid="9r5j3GR0RQQ">
+											<div class="vImg" style="background-image: URL('https://i.ytimg.com/vi/9r5j3GR0RQQ/mqdefault.jpg');"></div>
+											<div class=vTit>Video 6</div>
+										</div>
+									</div>
+									<div class="g_nm w33 md_w50 m_w100">
+										<div style="margin:5px;" class="vBox pointer" vid="7C3hrEdXaXM">
+											<div class="vImg" style="background-image: URL('https://i.ytimg.com/vi/7C3hrEdXaXM/mqdefault.jpg');"></div>
+											<div class=vTit>Video 7</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</section>
-				<section class=fh>
-					<div id="map"></div>
-				</section>
-				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCalHyrlqK9VRmrDf0nqR5P653C0wosBiw&language=en&sensor=true&libraries=places"></script>
+				</div>
 			</div>
 			<style></style>
-			<div id=footer>
-				<div class="pa w100 flipHoriz" style="bottom: 0px; right: 0px; max-width: 400px; height: 200px; background: URL('https://www.lozaty.com/s/i/fbgr.png') scroll no-repeat right bottom/contain;"></div>
-				<div class=ov style="background: rgba(255,255,255,0.2);"></div>
-				<div class="flexi l">
-					<div class=pv20>
-						<div class="tbl" style="direction: ltr;">
-							<div class="col l" style="background: URL('https://www.lozaty.com/s/i/logo.png') scroll no-repeat left center/contain; min-width: 200px; height: 45px;"></div>
-							<div class="col r"></div>
-						</div>
-					</div>
-					<div class="mt20">
-						<div class="tbl" style="direction: ltr;">
-							<div class="col l w33 vt m_mt10">
-								<div class="footer-titil"> About Lozaty </div>
-								<p>
-									<p><span style="language:en-US"><span style="unicode-bidi:embed"><span style="word-break:normal"><span style="punctuation-wrap:hanging"><span style="font-size:16.0pt"><span style="font-family:Calibri"><span style="color:#0d0d0d"><span style="language:en-US"><span style="font-weight:bold">Lozaty&reg; refreshing lozenges&nbsp; are food supplements used for immediate relief of sore throat and/ or nasal congestion associated with respiratory conditions</span></span>
-										</span>
-										</span>
-										</span>
-										</span>
-										</span>
-										</span>
-										</span>
-									</p>
-								</p>
-							</div>
-							<div class="col colSep20"></div>
-							<div class="col w33 l vt m_mt10 fh">
-								<div class="footer-titil"> Where To Buy </div>
-								<p><a href="https://www.lozaty.com/where-to-buy" class=foa><b>Saudi Arabia</b></a><a href="https://www.lozaty.com/where-to-buy" class=foa><b>Lebanon</b></a><a href="https://www.lozaty.com/where-to-buy" class=foa><b>Jordan</b></a><a href="https://www.lozaty.com/where-to-buy" class=foa><b>Iraq</b></a></p>
-							</div>
-							<div class="col colSep20"></div>
-							<div class="col w33 l vt m_mt10">
-								<a href="https://fb.com/LozatyArabia" target="_blank">
-									<div class="c hicon dark ml5"><i class="fa fa-facebook"></i></div> /LozatyArabia</a>
-								<br>
-								<br>
-								<a href="https://www.lozaty.com/?lang=ar" style="font-family: 'ge_ss_twomedium';">
-									<div class="c hicon dark ml5" style="border: none; font-size: 16px;"><i class="fa fa-globe"></i></div> عربي</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="flexi l mt30"><address><br><strong><a href="mailto:lozaty@lozaty.com">lozaty@lozaty.com</a></strong></address></div>
-				<div class="flexi c m_mt80" style="line-height: 40px; color:#000; font-family: " Roboto "; font-weight: 400; font-size: 14px;"> &copy; 2021 Lozaty - لوزتي. All Rights Reserved </div>
-			</div>
 		</div>
 	</div>
-	<div class=ding></div>
-	<div id=gwf_full_slider style="position:fixed; top:0px; left:0px; background:rgba(146,129,178,0.7); width:100%; height:100%; z-index:9999999; display:none;" onclick="$('#gwf_full_slider').fadeOut(function(){ $('#gwf_full_slider').empty(); });"></div>
-	<script src="https://www.beacdn.com/s/j/bea.js">
-	bea.add("https://www.lozaty.com/s/j/j.js", -2);
-	</script>
-	<script src="https://www.youtube.com/iframe_api" id="iframe-demo"></script>
-	<script src="https://www.lozaty.com/s/j/jquery-jvectormap-2.0.3.min.js" id="iframe-demo"></script>
-	<script type="text/javascript">
-	pashi = 1;
-	flusha();
-	var zoom = 15;
-	var latlng = new google.maps.LatLng(34.4343223, 35.8360899);
-	var mapOptions = {
-		zoom: zoom,
-		center: latlng,
-		scrollwheel: false
-	};
-	var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-	var marker = new google.maps.Marker({
-		position: latlng,
-		map: map
-	});
-	$('#contForm').ajaxForm({
-		beforeSend: function() {
-			var req = ["Name", "Email", "Subject", "Message"];
-			for(var i = 0; i < req.length; i++) {
-				var f = $('#contForm #' + req[i]);
-				if($.trim(f.val()) == 0) {
-					alert(f.attr('placeholder'));
-					f.focus();
-					return false
-				}
-			}
-			$('#submit').prop('disabled', true).removeClass('pointer').html($('#submit').data('loading'))
-		},
-		clearForm: true,
-		resetForm: true,
-		url: 'https://www.lozaty.com/ajax/contact',
-		success: function() {
-			alert("Your message was sent!");
-			$('#submit').prop('disabled', false).addClass('pointer').html($('#submit').data('action'))
-		},
-		error: function() {
-			alert("Error! Please try again");
-			$('#submit').prop('disabled', false).addClass('pointer').html($('#submit').data('action'))
-		}
-	});
-	viewsec('contact', 'contact', 'contact', 'contact');
-	</script>
-	<script>
-	$(document).ready(function() {
-		$(window).scroll(function() {
-			var x = getScrollXY();
-			if(x >= $('#header').outerHeight() - 89) $('.head').addClass('active');
-			else $('.head').removeClass('active');
-		});
-		$('#discover_b_m').on('click touch', function(e) {
-			e.preventDefault();
-			e.stopPropagation();
-			if($('.kilos:first').hasClass('fh')) {
-				$('.kilos').removeClass('fh');
-				$('.milos').addClass('fh');
-			} else {
-				$('.kilos').addClass('fh');
-				$('.milos').removeClass('fh');
-			}
-		});
-		$(document).on('click touch', function(e) {
-			if($(e.target).closest('.kilos').length == 0) {
-				if(!$('.kilos:first').hasClass('fh')) {
-					e.preventDefault();
-					e.stopPropagation();
-					$('.kilos').addClass('fh');
-					$('.milos').removeClass('fh');
-				}
-			}
-		});
-	});
-	</script>
-	<div id="exe" style="display:none;"></div>
+
+	
 </body>
 
 </html>

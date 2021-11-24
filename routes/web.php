@@ -21,6 +21,15 @@ Route::get('/discover', function () {
     return view('discover');
 })->name('discover');
 
+Route::get('/videos', function () {
+    return view('videos');
+})->name('videos');
+
+Route::get('/global-presence', function () {
+    return view('global-presence');
+})->name('global-presence');
+
+
 Route::get('/contact-us', function () {
     return view('contact');
 })->name('contact');
