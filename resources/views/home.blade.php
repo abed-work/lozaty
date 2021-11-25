@@ -17,32 +17,32 @@
                 background: scroll no-repeat center center/contain; 
             }
             .l1 {
-                background-image: URL('https://www.lozaty.com/s/i/l1.png'); 
+                background-image: URL('/images/l1.png'); 
                 left: -100%; 
                 z-index: 7; 
             } 
             .l2 {
-                background-image: URL('https://www.lozaty.com/s/i/l2.png'); 
+                background-image: URL('/images/l2.png'); 
                 left: -100%; 
                 z-index: 8; 
             } 
             .l3 { 
-                background-image: URL('https://www.lozaty.com/s/i/l3.png'); 
+                background-image: URL('/images/l3.png'); 
                 left: -100%; 
                 z-index: 9; 
             } 
             .l4 {   
-                background-image: URL('https://www.lozaty.com/s/i/l4.png'); 
+                background-image: URL('/images/l4.png'); 
                 left: 100%; 
                 z-index: 10;
             } 
             .l5 { 
-                background-image: URL('https://www.lozaty.com/s/i/l5.png'); 
+                background-image: URL('/images/l5.png'); 
                 left: 100%; 
                 z-index: 8; 
             } 
             .l6 {
-                background-image: URL('https://www.lozaty.com/s/i/l6.png');
+                background-image: URL('/images/l6.png');
                 left: 100%;
                 z-index: 7; 
             } 
@@ -60,27 +60,27 @@
                     transform: translateX(-50%); 
                 } 
                 .l1 { 
-                    background-image: URL('https://www.lozaty.com/s/i/l1_M.png'); 
+                    background-image: URL('/images/l1_M.png'); 
                 } 
                 .l2 { 
-                    background-image: URL('https://www.lozaty.com/s/i/l2_M.png'); 
+                    background-image: URL('/images/l2_M.png'); 
                 } 
                 .l3 { 
-                    background-image: URL('https://www.lozaty.com/s/i/l3_M.png'); 
+                    background-image: URL('/images/l3_M.png'); 
                 } 
                 .l4 { 
-                    background-image: URL('https://www.lozaty.com/s/i/l4_M.png'); 
+                    background-image: URL('/images/l4_M.png'); 
                 } 
                 .l5 { 
-                    background-image: URL('https://www.lozaty.com/s/i/l5_M.png'); 
+                    background-image: URL('/images/l5_M.png'); 
                 } 
                 .l6 { 
-                    background-image: URL('https://www.lozaty.com/s/i/l6_M.png'); }
+                    background-image: URL('/images/l6_M.png'); }
                 } 
             </style>
         
-        <div id="header" style="background: URL('https://www.lozaty.com/s/i/bg.jpg') scroll repeat center center/cover;">
-            <div class="pa w100 flipHoriz" style="left: 0px; top: 0px; max-width: 600px; height: 240px; background: URL('https://www.lozaty.com/s/i/hbgl.png') scroll no-repeat left top/contain;"></div>
+        <div id="header" style="background: URL('/images/bg.jpg') scroll repeat center center/cover;">
+            <div class="pa w100 flipHoriz" style="left: 0px; top: 0px; max-width: 600px; height: 240px; background: URL('/images/hbgl.png') scroll no-repeat left top/contain;"></div>
             <div class=ov style="background: rgba(255,255,255,0.2);"></div>
             <div style="min-height:100vh;" class=m_ph70>
                 <div class="tbl_nm" style="height:100vh;">

@@ -328,7 +328,7 @@
 	<div class="m_v_m pf" style="background: rgba(255,255,255,0.98); background: #9280B3; z-index: 99999; left:0; top: 0; right: 0; bottom: 0;">
 		<div class="ov trans h m_sib pointer m_toggle" style="z-index: 999; left: auto; right:20px; top:10px; font-size: 40px; line-height: 50px; bottom: auto; height:50px;"><span class="mdi mdi-close"></span></div>
 		<div class="logoH" style="margin-top: 90px; background-position: center center; padding-bottom: 20px;">
-			<a href="https://www.lozaty.com/">
+			<a href="{{route('home')}}">
 				<div class="ov trans"></div>
 			</a>
 		</div>
@@ -336,40 +336,40 @@
 			<div class="g_nm w80" style="direction: ltr;">
 				<div class="g_nm w50 fs14 milos">
 					<a href="{{route('home')}}">
-						<div class="mb ez-f" id=home_b><i><img src="https://www.lozaty.com/home.svg" /></i>Home</div>
+						<div class="mb ez-f" id=home_b><i><img src="{{asset('images/home.svg')}}" /></i>Home</div>
 					</a>
 				</div>
 				<div class="g_nm w50 fs14 milos">
-					<div class="mb ez-f" id=discover_b_m><i><img src="https://www.lozaty.com/flavors.svg" /></i>Discover Lozaty</div>
+					<div class="mb ez-f" id=discover_b_m><i><img src="{{asset('images/flavors.svg')}}" /></i>Discover Lozaty</div>
 				</div>
 				<div class="g_nm w50 fs14 milos">
 					<a href="{{route('videos')}}">
-						<div class="mb ez-f" id=videos_b><i><img src="https://www.lozaty.com/videos.svg" /></i>Videos</div>
+						<div class="mb ez-f" id=videos_b><i><img src="{{asset('images/videos.svg')}}" /></i>Videos</div>
 					</a>
 				</div>
 				<div class="g_nm w50 fs14 milos">
 					<a href="{{route('global-presence')}}">
-						<div class="mb ez-f" id=gp_b><i><img src="https://www.lozaty.com/loc.svg" /></i>Global Presence</div>
+						<div class="mb ez-f" id=gp_b><i><img src="{{asset('images/loc.svg')}}" /></i>Global Presence</div>
 					</a>
 				</div>
 				<div class="g_nm w50 fs14 milos">
 					<a href="{{route('contact')}}">
-						<div class="mb ez-f" id=contact_b><i><img src="https://www.lozaty.com/contact.svg" /></i>Contact Us</div>
+						<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/contact.svg')}}" /></i>Contact Us</div>
 					</a>
 				</div>
 				<div class="g_nm w50 fs14 kilos fh">
 					<a href="{{route('discover')}}/overview">
-						<div class="mb ez-f" id=contact_b><i><img src="https://www.lozaty.com/flavors.svg" /></i>Overview</div>
+						<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/flavors.svg')}}" /></i>Overview</div>
 					</a>
 				</div>
 				<div class="g_nm w50 fs14 kilos fh">
-					<a href="https://www.lozaty.com/discover/composition">
-						<div class="mb ez-f" id=contact_b><i><img src="https://www.lozaty.com/flavors.svg" /></i>Composits</div>
+					<a href="{{route('discover')}}">
+						<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/flavors.svg')}}" /></i>Composits</div>
 					</a>
 				</div>
 				<div class="g_nm w50 fs14 kilos fh">
-					<a href="https://www.lozaty.com/discover/flavors">
-						<div class="mb ez-f" id=contact_b><i><img src="https://www.lozaty.com/flavors.svg" /></i>Flavors</div>
+					<a href="{{route('discover')}}">
+						<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/flavors.svg')}}" /></i>Flavors</div>
 					</a>
 				</div>
 			</div>
@@ -388,7 +388,7 @@
 		}
 		
 		.logoH {
-			background: URL('https://www.lozaty.com/s/i/logo.png') scroll no-repeat left center/contain;
+			background: URL('/images/logo.png') scroll no-repeat left center/contain;
 			min-width: 200px;
 			height: 45px;
 		}
@@ -501,33 +501,33 @@
 							<a href="{{route('home')}}">
 								<div class="ov trans"></div>
 							</a>
-							<div class="ov trans h m_sib pointer m_toggle" style="z-index: 999; left: auto; font-size: 0px; line-height: 50px;"><img src="https://www.lozaty.com/s/i/menu.svg" style="width: 30px;" /></div>
+							<div class="ov trans h m_sib pointer m_toggle" style="z-index: 999; left: auto; font-size: 0px; line-height: 50px;"><img src="{{asset('images/menu.svg')}}" style="width: 30px;" /></div>
 						</div>
 						<div class="col r m_h">
 							<a href="{{route('home')}}">
-								<div class="mb ez-f" id=home_b><i><img src="https://www.lozaty.com/home.svg" /></i>Home</div>
+								<div class="mb ez-f" id=home_b><i><img src="{{asset('images/home.svg')}}" /></i>Home</div>
 							</a>
-							<div class="mb ez-f mbA" id=discover_b> <a href="{{route('discover')}}"><i><img src="https://www.lozaty.com/flavors.svg" /></i>Discover Lozaty</a>
+							<div class="mb ez-f mbA" id=discover_b> <a href="{{route('discover')}}"><i><img src="{{asset('images/flavors.svg')}}" /></i>Discover Lozaty</a>
 								<div class="subM ez-f">
 									<a href="{{route('discover')}}">
 										<div class="subMb"><span class="mdi mdi-circle-medium"></span>Overview</div>
 									</a>
-									<a href="https://www.lozaty.com/discover/composition">
+									<a href="{{route('discover')}}">
 										<div class="subMb"><span class="mdi mdi-circle-medium"></span>Composits</div>
 									</a>
-									<a href="https://www.lozaty.com/discover/flavors">
+									<a href="{{route('discover')}}">
 										<div class="subMb"><span class="mdi mdi-circle-medium"></span>Flavors</div>
 									</a>
 								</div>
 							</div>
 							<a href="{{route('videos')}}">
-								<div class="mb ez-f" id=videos_b><i><img src="https://www.lozaty.com/videos.svg" /></i>Videos</div>
+								<div class="mb ez-f" id=videos_b><i><img src="{{asset('images/videos.svg')}}" /></i>Videos</div>
 							</a>
 							<a href="{{route('global-presence')}}">
-								<div class="mb ez-f" id=global-presence_b><i><img src="https://www.lozaty.com/loc.svg" /></i>Global Presence</div>
+								<div class="mb ez-f" id=global-presence_b><i><img src="{{asset('images/loc.svg')}}" /></i>Global Presence</div>
 							</a>
 							<a href="{{route('contact')}}">
-								<div class="mb ez-f" id=contact_b><i><img src="https://www.lozaty.com/contact.svg" /></i>Contact Us</div>
+								<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/contact.svg')}}" /></i>Contact Us</div>
 							</a>
 						</div>
 					</div>

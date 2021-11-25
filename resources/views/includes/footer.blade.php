@@ -282,4 +282,28 @@ viewsec('home', 'home', '', ''); </script>
         });
     });
 </script>
+<script type="text/javascript">
+	pashi = 1;
+	flusha();
+	$('.flavorC').on('click touch', function() {});
+	$('.flavorC').on('click touch', function() {
+		var i = $(this).find('.flavors_img:first').attr('data-i');
+		var vForm = '<div style="position:absolute;top: 15%;left: 15%;right: 15%;bottom: 15%;background: URL(\'' + i + '\') scroll no-repeat center center/contain;"></div>';
+		$('#gwf_full_slider').empty().html(vForm).fadeIn()
+	});
+	viewsec('discover', 'discover', 'discover', 'discover');
+	</script>
+	
+	<script type="text/javascript">
+		pashi = 1;
+		flusha();
+		$('.vBox').on('click touch', function() {
+			var id = $(this).attr('vid');
+			var vForm = '<div style=\"position:absolute;top: 15%;left: 15%;right: 15%;bottom: 15%;background:#000;\"><iframe allowfullscreen=""frameborder="0"height="100%"src="//www.youtube.com/embed/' + id + '?autoplay=1&amp;modestbranding=1&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;color=blue&amp;vq=hd720&amp;enablejsapi=1"class="preservear"style="width: 100%;height: 100%;position:absolute;left:0px;right:0px;top:0px;bottom:0px;"></iframe></div>';
+			$('#gwf_full_slider').empty().html(vForm.split("[VID]").join(id)).fadeIn()
+		});
+		viewsec('videos', 'videos', 'videos', 'videos');
+	</script>
+
+
 <div id="exe" style="display:none;" ></div>
