@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +34,12 @@ Route::get('/global-presence', function () {
 Route::get('/contact-us', function () {
     return view('contact');
 })->name('contact');
+
+
+Route::get('/login', [AuthController::class,'index'])->name('login');
+Route::post('/login', [AuthController::class,'authenticate']);
+
+
+Route::prefix('dashboard')->name('dashboard.')->group(function () {
+    Route::get('/', [AdminController::class,'index'])->name('home');
+});
