@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Video;
 use Illuminate\Http\Request;
 
 class VideoController extends Controller
 {
 
-
     public function index()
     {
-        return view('admin.video.index');
+        return view('admin.video.index',[
+            'videos'    => Video::all()
+        ]);
     }
 
     /**
@@ -31,7 +33,29 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'video_title'=>'required',
+            'video_id'=>'required',
+            'video_image'=>'required|image'
+        ]);
+
+        $filenameToStore=NULL;  
+        if($request->hasFile('video_image')){
+            $image=$request->video_image;
+            $filename = $image->getClientOriginalName();
+            $imageBaseName = pathinfo($filename,PATHINFO_FILENAME);
+            $imageExtension = pathinfo($filename,PATHINFO_EXTENSION);
+            $filenameToStore = $imageBaseName . '-' . time() . '.' . $imageExtension;
+            $path = $image->storeAs('public/images/' , $filenameToStore);
+        }
+
+        Video::create([
+            'title'             =>  $request->video_title,
+            'featured_image'    =>  $filenameToStore,
+            'link'              =>  $request->video_id
+        ]);
+
+        return redirect()->route('dashboard.videos.index');
     }
 
     /**
@@ -41,8 +65,11 @@ class VideoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        return view('admin.video.show');
+    {   
+        $video = Video::findOrFail($id);
+        return view('admin.video.show',[
+            'video' => $video
+        ]);
     }
 
     /**
@@ -53,7 +80,10 @@ class VideoController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.video.edit');
+        $video = Video::findOrFail($id);
+        return view('admin.video.edit',[
+            'video'=>$video
+        ]);
     }
 
     /**
@@ -65,7 +95,36 @@ class VideoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $video = Video::findOrFail($id);
+
+        $this->validate($request,[
+            'video_title'=>'required',
+            'video_link'=>'required',
+            'video_image'=>'required|image'
+        ]);
+
+        $filenameToStore=NULL;  
+        if($request->hasFile('video_image')){
+            $image=$request->video_image;
+            $filename = $image->getClientOriginalName();
+            $imageBaseName = pathinfo($filename,PATHINFO_FILENAME);
+            $imageExtension = pathinfo($filename,PATHINFO_EXTENSION);
+            $filenameToStore = $imageBaseName . '-' . time() . '.' . $imageExtension;
+            $path = $image->storeAs('public/images/' , $filenameToStore);
+
+            // delete the old image
+
+            if (file_exists(storage_path().'/app/public/images/'.$video->featured_image))
+                unlink(storage_path().'/app/public/images/'.$video->featured_image);
+            }
+
+        $video->title = $request->video_title;
+        $video->featured_image = ($filenameToStore == NULL ? $video->featured_image:$filenameToStore);
+        $video->link = $request->video_link;
+
+        $video->save();
+
+        return redirect()->route('dashboard.videos.index');
     }
 
     /**
@@ -74,8 +133,16 @@ class VideoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
+    public function destroy($id){
+        $video = Video::findOrFail($id);
+
+        if (file_exists(storage_path().'/app/public/images/'.$video->featured_image)){
+            unlink(storage_path().'/app/public/images/'.$video->featured_image);
+        }
+
+        $video->delete();
+
+        return redirect()-route('dashboard.videos.index');
+
     }
 }

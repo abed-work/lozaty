@@ -2,35 +2,62 @@
 
 @section('body')
   <div class="card">
-    <div class="card-header"><i class="fas fa-video"></i> All Videos</div>
+    <div class="card-header col-2">
+        <div class="left"><i class="fas fa-video"></i> All Videos</div>
+        <div class="right add-video">
+            <a href="{{route('dashboard.videos.create')}}"><i class="fas fa-plus"></i> Add a video </a>
+        </div>
+    </div>
     <div class="card-body">
       <table>
         <thead>
             <th>#</th>
-            <th>Image</th>
+            <th>Featured Image</th>
+            <th>Title</th>
             <th>Youtube Link Id</th>
             <th>Operation</th>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td><img src="" alt=""></td>
-            <td>Qbasdds</td>
-            <td class="operation">
-              <div><a target="_blank" href=""><i class="fas fa-eye"></i></a></div>
-              <div><a href=""><i class="fas fa-edit"></i></a></div>
-              <div>
-                  <form class="delete-form" action="" method="POST">
-                      @csrf
-                      @method('DELETE')
-                      <button type="submit"><i class="fas fa-trash-alt delete"></i></button>
-                  </form>
-              </div>
-          </td>
-          </tr>
+            @foreach ($videos as $video)
+                <tr>
+                    <td>{{$loop->iteration}}</td>
+                    <td><img src="{{asset('storage/images/'.$video->featured_image)}}" alt="" width="50px" height="50px"></td>
+                    <td>{{$video->title}}</td>
+                    <td>{{$video->link}}</td>
+                    <td class="operation">
+                    <div><a href={{route('dashboard.videos.show',['video'=>$video->id])}}><i class="fas fa-eye"></i></a></div>
+                    <div><a href={{ route('dashboard.videos.edit', ['video'=>$video->id]) }}><i class="fas fa-edit"></i></a></div>
+                    <div>
+                        <form class="delete-form" action={{ route('dashboard.videos.destroy', ['video'=>$video->id]) }} method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit"><i class="fas fa-trash-alt delete"></i></button>
+                        </form>
+                    </div>
+                    </td>
+                </tr>
+            @endforeach
         </tbody>
       </table>
     </div>
   </div>
+
+  <style>
+      .col-2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center  
+      }
+      .add-video a{
+          color: #fff;
+          background-color: #007bff;
+          text-decoration: none;
+          border: 1px solid #007bff;
+          font-size: 13px;
+          padding: 7px;
+          border-radius: 5px
+      }
+  </style>
+
 
 @endsection

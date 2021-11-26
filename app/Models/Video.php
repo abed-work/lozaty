@@ -9,6 +9,7 @@ class Video extends Model
 {
 
     protected $fillable = [
+        'title',
         'featured_image',
         'link'
     ];
