@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\VideoController ;
+use App\Http\Controllers\VideoController;
+use App\Http\Controllers\GlobalPresenceController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Video;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +27,9 @@ Route::get('/discover', function () {
 })->name('discover');
 
 Route::get('/videos', function () {
-    return view('videos');
+    return view('videos',[
+        'videos' => Video::all()
+    ]);
 })->name('videos');
 
 Route::get('/global-presence', function () {
@@ -48,5 +52,7 @@ Route::middleware('auth')->prefix('dashboard')->name('dashboard.')->group(functi
     Route::get('/', [AdminController::class,'index'])->name('home');
 
     Route::resource('videos', VideoController::class);
+
+    Route::resource('global-presence', GlobalPresenceController::class);
 
 });

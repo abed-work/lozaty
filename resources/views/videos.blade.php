@@ -19,7 +19,7 @@
 		width: 50px;
 		margin-left: -25px;
 		margin-top: -25px;
-		background: URL('https://www.beacdn.com/play_button.png') scroll no-repeat center center/contain;
+		background: URL('/images/play_button.png') scroll no-repeat center center/contain;
 	}
 	
 	.vTit {
@@ -53,48 +53,14 @@
 					</div>
 				</div>
 				<div class="sTxt mt40 fs0 l" style="margin:-5px;">
-					<div class="g_nm w33 md_w50 m_w100">
-						<div style="margin:5px;" class="vBox pointer" vid="rD5xlDGN3Os">
-							<div class="vImg" style="background-image: URL('https://i.ytimg.com/vi/rD5xlDGN3Os/mqdefault.jpg');"></div>
-							<div class=vTit>Video 1</div>
-						</div>
-					</div>
-					<div class="g_nm w33 md_w50 m_w100">
-						<div style="margin:5px;" class="vBox pointer" vid="c7mUHNTAPmc">
-							<div class="vImg" style="background-image: URL('https://i.ytimg.com/vi/c7mUHNTAPmc/mqdefault.jpg');"></div>
-							<div class=vTit>Video 2</div>
-						</div>
-					</div>
-					<div class="g_nm w33 md_w50 m_w100">
-						<div style="margin:5px;" class="vBox pointer" vid="GDBFkaoQ1tA">
-							<div class="vImg" style="background-image: URL('https://i.ytimg.com/vi/GDBFkaoQ1tA/mqdefault.jpg');"></div>
-							<div class=vTit>Video 3</div>
-						</div>
-					</div>
-					<div class="g_nm w33 md_w50 m_w100">
-						<div style="margin:5px;" class="vBox pointer" vid="sY2XGfk0D9Y">
-							<div class="vImg" style="background-image: URL('https://i.ytimg.com/vi/sY2XGfk0D9Y/mqdefault.jpg');"></div>
-							<div class=vTit>Video 4</div>
-						</div>
-					</div>
-					<div class="g_nm w33 md_w50 m_w100">
-						<div style="margin:5px;" class="vBox pointer" vid="dxlh1BbO3XQ">
-							<div class="vImg" style="background-image: URL('https://i.ytimg.com/vi/dxlh1BbO3XQ/mqdefault.jpg');"></div>
-							<div class=vTit>Video 5</div>
-						</div>
-					</div>
-					<div class="g_nm w33 md_w50 m_w100">
-						<div style="margin:5px;" class="vBox pointer" vid="9r5j3GR0RQQ">
-							<div class="vImg" style="background-image: URL('https://i.ytimg.com/vi/9r5j3GR0RQQ/mqdefault.jpg');"></div>
-							<div class=vTit>Video 6</div>
-						</div>
-					</div>
-					<div class="g_nm w33 md_w50 m_w100">
-						<div style="margin:5px;" class="vBox pointer" vid="7C3hrEdXaXM">
-							<div class="vImg" style="background-image: URL('https://i.ytimg.com/vi/7C3hrEdXaXM/mqdefault.jpg');"></div>
-							<div class=vTit>Video 7</div>
-						</div>
-					</div>
+					@foreach ($videos as $video)
+						<div class="g_nm w33 md_w50 m_w100">
+							<div style="margin:5px;" class="vBox pointer" vid="{{$video->link}}">
+								<div class="vImg" style="background-image: URL('storage/images/{{$video->featured_image}}');"></div>
+								<div class=vTit>{{$video->title}}</div>
+							</div>
+						</div>			
+					@endforeach
 				</div>
 			</div>
 		</div>

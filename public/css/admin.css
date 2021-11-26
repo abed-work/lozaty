@@ -173,6 +173,7 @@ table tbody tr td {
 
 table .operation {
     display: flex;
+    line-height: 3.5;
 }
 
 table .operation > div{

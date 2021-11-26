@@ -49,9 +49,8 @@
 	"AE": 10,
 	"KW": 10,
 	"JO": 10,
-	"BH": 10,
-	"CA":10
-	};
+	"BH": 10
+};
 	jQuery.fn.vectorMap('addMap', 'world_mill', {
 	"insets": [{
 		"width": 900,
