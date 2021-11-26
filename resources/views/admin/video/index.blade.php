@@ -1,39 +1,28 @@
 @extends('layouts.admin-layout')
 
 @section('body')
-    <div class="flex">
-        <div class="card">
-            <div class="card-header">To be ..</div>
-            <div class="card-body"></div>
-        </div>
-        <div class="card">
-            <div class="card-header">To be ..</div>
-            <div class="card-body"></div>
-        </div>
-        <div class="card">
-            <div class="card-header">To be ..</div>
-            <div class="card-body"></div>
-        </div>
-        <div class="card">
-            <div class="card-header">To be ..</div>
-            <div class="card-body"></div>
-        </div>
-        <div class="card">
-            <div class="card-header">To be ..</div>
-            <div class="card-body"></div>
-        </div>
+  <div class="card">
+    <div class="card-header"><i class="fas fa-video"></i> All Videos</div>
+    <div class="card-body">
+      <table>
+        <thead>
+            <th>#</th>
+            <th>Image</th>
+            <th>Youtube Link Id</th>
+            <th>Operation</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><img src="" alt=""></td>
+            <td>Qbasdds</td>
+            <td>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    
-    <style>
-        .flex{
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .flex > *{
-            margin: 0 10px 20px 0;
-            flex-basis: 30%;
-            flex-grow: 1
-        }
-    </style>
+  </div>
 
 @endsection

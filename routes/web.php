@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\VideoController ;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,11 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 })->name('home');
 
 Route::get('/discover', function () {
-    return view('discover');
+    return view('discover'); 
 })->name('discover');
 
 Route::get('/videos', function () {
@@ -40,6 +41,12 @@ Route::get('/login', [AuthController::class,'index'])->name('login');
 Route::post('/login', [AuthController::class,'authenticate']);
 
 
-Route::prefix('dashboard')->name('dashboard.')->group(function () {
+Route::middleware('auth')->prefix('dashboard')->name('dashboard.')->group(function () {
+
+    Route::post('/logout', [AuthController::class,'logout'])->name('logout');
+    
     Route::get('/', [AdminController::class,'index'])->name('home');
+
+    Route::resource('videos', VideoController::class);
+
 });
