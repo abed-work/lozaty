@@ -175,6 +175,10 @@ table .operation {
     display: flex;
 }
 
+table .operation > div{
+    margin-right: 10px;
+}
+
 table .operation.image {
     line-height: 6;
 }

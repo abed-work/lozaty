@@ -16,9 +16,17 @@
             <td>1</td>
             <td><img src="" alt=""></td>
             <td>Qbasdds</td>
-            <td>
-
-            </td>
+            <td class="operation">
+              <div><a target="_blank" href=""><i class="fas fa-eye"></i></a></div>
+              <div><a href=""><i class="fas fa-edit"></i></a></div>
+              <div>
+                  <form class="delete-form" action="" method="POST">
+                      @csrf
+                      @method('DELETE')
+                      <button type="submit"><i class="fas fa-trash-alt delete"></i></button>
+                  </form>
+              </div>
+          </td>
           </tr>
         </tbody>
       </table>
