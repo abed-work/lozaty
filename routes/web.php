@@ -6,6 +6,8 @@ use App\Http\Controllers\VideoController;
 use App\Http\Controllers\GlobalPresenceController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Video;
+use App\Models\GlobalPresence;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +35,9 @@ Route::get('/videos', function () {
 })->name('videos');
 
 Route::get('/global-presence', function () {
-    return view('global-presence');
+    return view('global-presence',[
+        'countries' => GlobalPresence::select('country_code')->get()
+    ]);
 })->name('global-presence');
 
 Route::get('/contact-us', function () {

@@ -32,6 +32,15 @@
 	</div>
 	<style></style>
 
+	@php
+    $getCountries = array();
+	@endphp
+	@foreach ($countries as $country)
+		@php
+			$getCountries[$country->country_code]=10;
+		@endphp
+	@endforeach
+
 <div class=ding></div>
 <div id=gwf_full_slider style="position:fixed; top:0px; left:0px; background:rgba(146,129,178,0.7); width:100%; height:100%; z-index:9999999; display:none;" onclick="$('#gwf_full_slider').fadeOut(function(){ $('#gwf_full_slider').empty(); });"></div>
 <script src="https://www.beacdn.com/s/j/bea.js"> bea.add("/js/index.js", -2); </script>
@@ -40,17 +49,8 @@
 <script type="text/javascript">
 	pashi = 1;
 	flusha();
-	var gdpData = {
-	"LB": 10,
-	"LY": 10,
-	"IQ": 10,
-	"YE": 10,
-	"SA": 10,
-	"AE": 10,
-	"KW": 10,
-	"JO": 10,
-	"BH": 10
-};
+	var gdpData= <?php echo json_encode($getCountries) ?>;
+
 	jQuery.fn.vectorMap('addMap', 'world_mill', {
 	"insets": [{
 		"width": 900,

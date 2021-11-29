@@ -1,16 +1,15 @@
 @extends('layouts.admin-layout')
 
 @php
-    $count = array(
+    $getCountries = array(
     );
 @endphp
 
 @foreach ($countries as $country)
     @php
-        $count[$country->country_code]=10;
+        $getCountries[$country->country_code]=10;
     @endphp
 @endforeach
-
 
 @section('body')
     <div class="card">
@@ -359,7 +358,7 @@
         pashi = 1;
         flusha();
 
-        var gdpData= <?php echo json_encode($count) ?>;
+        var gdpData= <?php echo json_encode($getCountries) ?>;
 
         fetch('http://127.0.0.1:8000/dashboard/global-presence/active')
         .then(response => response.json())
