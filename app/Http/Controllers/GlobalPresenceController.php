@@ -15,7 +15,9 @@ class GlobalPresenceController extends Controller
     public function index()
     {
         
-        return view('admin.global-presence.index');
+        return view('admin.global-presence.index',[
+            'countries' => GlobalPresence::select('country_code')->get()
+        ]);
     }
 
     public function getActiveCountries(){

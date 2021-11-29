@@ -1,5 +1,17 @@
 @extends('layouts.admin-layout')
 
+@php
+    $count = array(
+    );
+@endphp
+
+@foreach ($countries as $country)
+    @php
+        $count[$country->country_code]=10;
+    @endphp
+@endforeach
+
+
 @section('body')
     <div class="card">
         <div class="card-header"><i class="fas fa-globe-americas"></i> Global Presence</div>
@@ -347,19 +359,17 @@
         pashi = 1;
         flusha();
 
-        var gdpData= {};
+        var gdpData= <?php echo json_encode($count) ?>;
 
-            fetch('http://127.0.0.1:8000/dashboard/global-presence/active')
-            .then(response => response.json())
-            .then(data => {
-               data.forEach(element => {
-                    let countryCode = element['country_code'];
-                    console.log(countryCode);
-                    gdpData[String(countryCode)]="10";
-                    $('#'+countryCode).addClass('active');
-                    $('#'+countryCode+ ' input').prop('checked', true);
-               });
+        fetch('http://127.0.0.1:8000/dashboard/global-presence/active')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(element => {
+                let countryCode = element['country_code'];
+                $('#'+countryCode).addClass('active');
+                $('#'+countryCode+ ' input').prop('checked', true);
             });
+        });
         
 
        /* var gdpData = {
@@ -369,9 +379,6 @@
             HT: 10,
             HU: 10
         };*/
-       
-
-        console.log(gdpData);
 
         //console.log(co);
 
