@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DiscoverLozaty;
+use App\Http\Controllers\FlavorController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\GlobalPresenceController;
 use Illuminate\Support\Facades\Route;
@@ -59,5 +61,10 @@ Route::middleware('auth')->prefix('dashboard')->name('dashboard.')->group(functi
 
     Route::get('global-presence/active', [GlobalPresenceController::class,'getActiveCountries']);
     Route::resource('global-presence', GlobalPresenceController::class);
+
+    Route::resource('discover-lozaty', DiscoverLozaty::class);
+
+    Route::resource('flavors', FlavorController::class);
+
 
 });

@@ -29,7 +29,11 @@
     </div>
 
     <div class="card">
-        <div class="card-header">Countries</div>
+        <div class="card-header flex">
+            <div><i class="fas fa-edit"></i> Add/Remove Countries </div>
+            <div><input type="text" name="" id="search" placeholder="Search for countries.."></div>
+        </div>
+        
         <div class="card-body">
             <form action={{route('dashboard.global-presence.store')}} method="post">
                 @csrf
@@ -75,7 +79,30 @@
         input[type="checkbox"]{
             width: 20px
         }
+        .flex{
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+        .flex input[type="text"]{
+            padding: 5px;
+        }
     </style>
+
+
+    <script>
+        $("#search").keyup(function() {
+            var value = this.value.toLowerCase();
+
+            $("table").find("tr").each(function(index) {
+                if (!index) return;
+                var id = $(this).find("td").first().text().toLowerCase();
+                $(this).toggle(id.indexOf(value) !== -1);
+            });
+        });
+    </script>
+
+
     <script src="https://www.beacdn.com/s/j/bea.js"> bea.add("/js/index.js", -2); </script>
     <script src="https://www.youtube.com/iframe_api" id="iframe-demo"></script>
     <script src="{{asset('/js/jquery-jvectormap-2.0.3.min.js')}}" id="iframe-demo"></script>
@@ -360,7 +387,7 @@
 
         var gdpData= <?php echo json_encode($getCountries) ?>;
 
-        fetch('http://127.0.0.1:8000/dashboard/global-presence/active')
+        fetch(window.location.href+'/active')
         .then(response => response.json())
         .then(data => {
             data.forEach(element => {
@@ -370,18 +397,6 @@
             });
         });
         
-
-       /* var gdpData = {
-            CA: 10,
-            HK: 10,
-            HM: 10,
-            HT: 10,
-            HU: 10
-        };*/
-
-        //console.log(co);
-
-
         jQuery.fn.vectorMap('addMap', 'world_mill', {
         "insets": [{
             "width": 900,

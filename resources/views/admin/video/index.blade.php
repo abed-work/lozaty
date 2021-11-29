@@ -4,7 +4,7 @@
   <div class="card">
     <div class="card-header col-2">
         <div class="left"><i class="fas fa-video"></i> All Videos</div>
-        <div class="right add-video">
+        <div class="right add-new">
             <a href="{{route('dashboard.videos.create')}}"><i class="fas fa-plus"></i> New video </a>
         </div>
     </div>
@@ -49,23 +49,5 @@
       </table>
     </div>
   </div>
-
-  <style>
-      .col-2{
-        display: flex;
-        justify-content: space-between;
-        align-items: center  
-      }
-      .add-video a{
-          color: #fff;
-          background-color: #007bff;
-          text-decoration: none;
-          border: 1px solid #007bff;
-          font-size: 13px;
-          padding: 7px;
-          border-radius: 5px
-      }
-  </style>
-
 
 @endsection

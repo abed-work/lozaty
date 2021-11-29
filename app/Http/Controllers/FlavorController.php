@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\GlobalPresence;
 
-class GlobalPresenceController extends Controller
+use App\Models\Flavor;
+
+class FlavorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,14 +15,7 @@ class GlobalPresenceController extends Controller
      */
     public function index()
     {
-        
-        return view('admin.global-presence.index',[
-            'countries' => GlobalPresence::select('country_code')->get()
-        ]);
-    }
-
-    public function getActiveCountries(){
-        return GlobalPresence::select('country_code')->get();
+        //
     }
 
     /**
@@ -31,7 +25,7 @@ class GlobalPresenceController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.discover-lozaty.flavor.create');
     }
 
     /**
@@ -42,18 +36,16 @@ class GlobalPresenceController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,[
+            'title'         => 'required',
+            'main_image'    => 'required|image|',
+            'pop_image'     => 'required|image|'
+        ]);
+        
+        Flavor::create([
+            'title'         => $request->title,
+        ]);
 
-        GlobalPresence::whereNotNull('id')->delete();
-
-        if ($request->countries){
-            foreach ($request->countries as $country) {
-                GlobalPresence::create([
-                    'country_code'  => $country
-                ]);
-            }
-        }
-
-        return redirect()->route('dashboard.global-presence.index');
     }
 
     /**

@@ -176,7 +176,7 @@ table .operation {
     line-height: 3.5;
 }
 
-table .operation > div{
+table .operation>div {
     margin-right: 10px;
 }
 
@@ -328,12 +328,29 @@ table .delete-form button {
     left: 0 !important;
 }
 
-.checkbox-parent{
+.checkbox-parent {
     display: flex;
     align-items: center;
 }
-.checkbox-parent input{
+
+.checkbox-parent input {
     width: 20px;
+}
+
+.col-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.add-new a {
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    font-size: 13px;
+    padding: 7px;
+    border-radius: 5px
 }
 
 @media only screen and (max-width:1024px) {
