@@ -33,6 +33,7 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
+
         $this->validate($request,[
             'video_title'=>'required',
             'video_id'=>'required',
@@ -52,7 +53,8 @@ class VideoController extends Controller
         Video::create([
             'title'             =>  $request->video_title,
             'featured_image'    =>  $filenameToStore,
-            'link'              =>  $request->video_id
+            'link'              =>  $request->video_id,
+            'isFeatured'        => ($request->is_featured ? 1:0)
         ]);
 
         return redirect()->route('dashboard.videos.index');
@@ -99,8 +101,7 @@ class VideoController extends Controller
 
         $this->validate($request,[
             'video_title'=>'required',
-            'video_link'=>'required',
-            'video_image'=>'required|image'
+            'video_link'=>'required'
         ]);
 
         $filenameToStore=NULL;  
@@ -121,6 +122,7 @@ class VideoController extends Controller
         $video->title = $request->video_title;
         $video->featured_image = ($filenameToStore == NULL ? $video->featured_image:$filenameToStore);
         $video->link = $request->video_link;
+        $video->isFeatured = ($request->is_featured ? 1:0);
 
         $video->save();
 

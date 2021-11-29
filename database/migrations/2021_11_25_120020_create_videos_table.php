@@ -18,6 +18,7 @@ class CreateVideosTable extends Migration
             $table->text('title');
             $table->text('featured_image');
             $table->text('link');
+            $table->boolean('isFeatured')->default(0);
             $table->timestamps();
         });
     }

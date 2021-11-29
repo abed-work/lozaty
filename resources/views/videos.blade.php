@@ -46,11 +46,15 @@
 			<div class="sep g_nm"></div>
 			<div class="mt50 m_mt20 c">
 				<div class=tbl style="direction: ltr;">
-					<div class=row>
-						<div class="col c vt">
-							<iframe frameborder="0" id="ifex" data-id="7C3hrEdXaXM" src="https://www.youtube.com/embed/7C3hrEdXaXM?autoplay=1&amp;modestbranding=1&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;color=blue&amp;vq=hd720&amp;enablejsapi=1" height="450" scrolling="no" width="100%"></iframe>
-						</div>
-					</div>
+					@foreach ($videos as $video)
+						@if ($video->isFeatured)
+							<div class="row">
+								<div class="col c vt">
+									<iframe frameborder="0" id="ifex" data-id="{{$video->link}}" src="https://www.youtube.com/embed/{{$video->link}}?autoplay=1&amp;modestbranding=1&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;color=blue&amp;vq=hd720&amp;enablejsapi=1" height="450" scrolling="no" width="100%"></iframe>
+								</div>
+							</div>
+						@endif
+					@endforeach
 				</div>
 				<div class="sTxt mt40 fs0 l" style="margin:-5px;">
 					@foreach ($videos as $video)

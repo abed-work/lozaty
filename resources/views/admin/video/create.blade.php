@@ -19,6 +19,11 @@
                 <input type="text" name="video_id" id="" placeholder="Hf07tAkyCvM">
             </div>
 
+            <div class="form-group checkbox-parent">
+                <div class="label">Is Featured</div>
+                <input type="checkbox" name="is_featured" id="">
+            </div>
+
             <div class="form-group image-parent">
                 <span class="btn btn-primary btn-file">
                     <i class="fas fa-images"></i> 

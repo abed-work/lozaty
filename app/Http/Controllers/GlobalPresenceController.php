@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\GlobalPresence;
 
 class GlobalPresenceController extends Controller
 {
@@ -13,7 +14,12 @@ class GlobalPresenceController extends Controller
      */
     public function index()
     {
+        
         return view('admin.global-presence.index');
+    }
+
+    public function getActiveCountries(){
+        return GlobalPresence::select('country_code')->get();
     }
 
     /**
@@ -34,7 +40,16 @@ class GlobalPresenceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        GlobalPresence::whereNotNull('id')->delete();
+
+        foreach ($request->countries as $country) {
+            GlobalPresence::create([
+                'country_code'  => $country
+            ]);
+        }
+
+        return redirect()->route('dashboard.global-presence.index');
     }
 
     /**

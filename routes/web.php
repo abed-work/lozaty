@@ -53,6 +53,7 @@ Route::middleware('auth')->prefix('dashboard')->name('dashboard.')->group(functi
 
     Route::resource('videos', VideoController::class);
 
+    Route::get('global-presence/active', [GlobalPresenceController::class,'getActiveCountries']);
     Route::resource('global-presence', GlobalPresenceController::class);
 
 });

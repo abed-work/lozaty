@@ -11,7 +11,8 @@ class Video extends Model
     protected $fillable = [
         'title',
         'featured_image',
-        'link'
+        'link',
+        'isFeatured'
     ];
 
     use HasFactory;

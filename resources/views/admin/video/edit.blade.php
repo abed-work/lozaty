@@ -20,6 +20,11 @@
                 <input type="text" name="video_link" id="" placeholder="Hf07tAkyCvM" value="{{$video->link}}">
             </div>
 
+            <div class="form-group checkbox-parent">
+                <div class="label">Is Featured</div>
+                <input type="checkbox" name="is_featured" id="" {{($video->isFeatured? 'checked':'')}}>
+            </div>
+
             <div class="form-group image-parent">
                 <span class="btn btn-primary btn-file">
                     <i class="fas fa-images"></i> 

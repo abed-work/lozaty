@@ -328,6 +328,14 @@ table .delete-form button {
     left: 0 !important;
 }
 
+.checkbox-parent{
+    display: flex;
+    align-items: center;
+}
+.checkbox-parent input{
+    width: 20px;
+}
+
 @media only screen and (max-width:1024px) {
     .side-bar {
         position: absolute;
