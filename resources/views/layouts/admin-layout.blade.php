@@ -24,9 +24,9 @@
                 <div class="admin-email">admin@lozaty.com</div>
             </div>
             <ul>
-                <li><a href="{{route('dashboard.videos.index')}}"> <span class="icon"><i class="fa fa-list-alt" aria-hidden="true"></i></span> <span>Videos</span></a></li>
-                <li><a href="{{route('dashboard.discover-lozaty.index')}}"> <span class="icon"><i class="fas fa-inventory"></i> </span> <span>Discover Lozaty</span></a></li>
-                <li><a href="{{route('dashboard.global-presence.index')}}"> <span class="icon"><i class="fas fa-cog"></i></span> <span>Global Presence</span></a></li>
+                <li><a href="{{route('dashboard.videos.index')}}"> <span class="icon"><i class="far fa-clone"></i></span> <span>Videos</span></a></li>
+                <li><a href="{{route('dashboard.discover-lozaty.index')}}"> <span class="icon"><i class="far fa-clone"></i> </span> <span>Discover Lozaty</span></a></li>
+                <li><a href="{{route('dashboard.global-presence.index')}}"> <span class="icon"><i class="far fa-clone"></i></span> <span>Global Presence</span></a></li>
                 <form action="{{route('dashboard.logout')}}" method="POST">
                     @csrf
                     <div class="logout">
