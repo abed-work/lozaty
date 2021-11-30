@@ -2,13 +2,14 @@
 
   @section('body')
     <div class="card">
-    <div class="card-header"><i class="fas fa-plus"></i> Add a flavor </div>
+    <div class="card-header"><i class="fas fa-plus"></i> Edit a flavor </div>
     <div class="card-body">
-        <form action="{{route('dashboard.flavors.store')}}" method="POST" enctype="multipart/form-data">
+        <form action={{route('dashboard.flavors.update',['flavor'=>$flavor->id])}} method="POST" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
             <div class="form-group">
                 <div class="label">Title</div>
-                <input type="text" name="title" id="" placeholder="Orange">
+                <input type="text" name="title" id="" placeholder="Orange" value="{{$flavor->title}}">
                 @error('title')
                     <div class="error-message">{{ $message }}</div>
                 @enderror
@@ -20,6 +21,7 @@
                     <i class="fas fa-images"></i> 
                     <span class="image-label">Main Image</span>
                     <input type="file" id="images" name="main_image" accept="image/gif, image/jpeg, image/png">
+                    <input type="hidden" name="old_main_image" value="{{$flavor->main_image}}">
                 </span>
                 @error('main_image')
                     <div class="error-message">{{ $message }}</div>
@@ -33,6 +35,7 @@
                     <i class="fas fa-images"></i> 
                     <span class="image-label">Pop-up Image</span>
                     <input type="file" id="images" name="pop_image" accept="image/gif, image/jpeg, image/png">
+                    <input type="hidden" name="old_pop_image" value="{{$flavor->pop_image}}">
                 </span>
                 @error('pop_image')
                     <div class="error-message">{{ $message }}</div>
@@ -41,7 +44,7 @@
             </div>
 
             <div class="form-group ">
-                <input class="save-btn" type="submit" value="Add">
+                <input class="save-btn" type="submit" value="Save changes">
             </div>
 
         </form>

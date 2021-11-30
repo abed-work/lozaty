@@ -41,10 +41,34 @@ class FlavorController extends Controller
             'main_image'    => 'required|image|',
             'pop_image'     => 'required|image|'
         ]);
+
+        $main_image=null;
+        $pop_image=null;
+
+        /* Main Image */
+        $image=$request->main_image;
+        $filename = $image->getClientOriginalName();
+        $imageBaseName = pathinfo($filename,PATHINFO_FILENAME);
+        $imageExtension = pathinfo($filename,PATHINFO_EXTENSION);
+        $main_image = $imageBaseName . '-' . time() . '.' . $imageExtension;
+        $path = $image->storeAs('public/images/' , $main_image);
+
+        /* Pop Image */
+        $image=$request->pop_image;
+        $filename = $image->getClientOriginalName();
+        $imageBaseName = pathinfo($filename,PATHINFO_FILENAME);
+        $imageExtension = pathinfo($filename,PATHINFO_EXTENSION);
+        $pop_image = $imageBaseName . '-' . time() . '.' . $imageExtension;
+        $path = $image->storeAs('public/images/' , $pop_image);
+        
         
         Flavor::create([
             'title'         => $request->title,
+            'main_image'    => $pop_image,
+            'pop_image'     => $main_image
         ]);
+
+        return redirect()->route('dashboard.discover-lozaty.index');
 
     }
 
@@ -56,7 +80,11 @@ class FlavorController extends Controller
      */
     public function show($id)
     {
-        //
+        $flavor = Flavor::findOrFail($id);
+
+        return view('admin.discover-lozaty.flavor.show',[
+            'flavor'    => $flavor
+        ]);
     }
 
     /**
@@ -67,7 +95,11 @@ class FlavorController extends Controller
      */
     public function edit($id)
     {
-        //
+        $flavor = Flavor::findOrFail($id);
+
+        return view('admin.discover-lozaty.flavor.edit',[
+            'flavor'    => $flavor
+        ]);
     }
 
     /**
@@ -79,7 +111,52 @@ class FlavorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $flavor = Flavor::findOrFail($id);
+
+        $this->validate($request,[
+            'title' => 'required'
+        ]);
+
+        if ($request->hasFile('main_image')){
+            // delete the old one
+            if (file_exists(storage_path().'/app/public/images/'.$flavor->main_image)){
+                unlink(storage_path().'/app/public/images/'.$flavor->main_image);
+            }
+
+            $image=$request->main_image;
+            $filename = $image->getClientOriginalName();
+            $imageBaseName = pathinfo($filename,PATHINFO_FILENAME);
+            $imageExtension = pathinfo($filename,PATHINFO_EXTENSION);
+            $main_image = $imageBaseName . '-' . time() . '.' . $imageExtension;
+            $path = $image->storeAs('public/images/' , $main_image);
+
+            $flavor->main_image = $main_image;
+
+        }
+        
+        if ($request->hasFile('pop_image')){
+            // delete the old one
+            if (file_exists(storage_path().'/app/public/images/'.$flavor->pop_image)){
+                unlink(storage_path().'/app/public/images/'.$flavor->pop_image);
+            }
+
+            $image=$request->pop_image;
+            $filename = $image->getClientOriginalName();
+            $imageBaseName = pathinfo($filename,PATHINFO_FILENAME);
+            $imageExtension = pathinfo($filename,PATHINFO_EXTENSION);
+            $pop_image = $imageBaseName . '-' . time() . '.' . $imageExtension;
+            $path = $image->storeAs('public/images/' , $pop_image);
+
+            $flavor->pop_image = $pop_image;
+
+        }
+        
+        $flavor->title = $request->title;
+        
+        $flavor->save();
+
+        return redirect()->route('dashboard.discover-lozaty.index');
+
     }
 
     /**
@@ -90,6 +167,18 @@ class FlavorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $flavor = Flavor::findOrFail($id);
+
+        if (file_exists(storage_path().'/app/public/images/'.$flavor->pop_image)){
+            unlink(storage_path().'/app/public/images/'.$flavor->pop_image);
+        }
+        if (file_exists(storage_path().'/app/public/images/'.$flavor->main_image)){
+            unlink(storage_path().'/app/public/images/'.$flavor->main_image);
+        }
+
+        $flavor->delete();
+
+        return redirect()->route('dashboard.discover-lozaty.index');
+
     }
 }

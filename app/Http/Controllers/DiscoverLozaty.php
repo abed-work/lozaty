@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Flavor;
+use App\Models\Overview;
+use App\Models\Composition;
 
 class DiscoverLozaty extends Controller
 {
@@ -13,7 +16,11 @@ class DiscoverLozaty extends Controller
      */
     public function index()
     {
-        return view('admin.discover-lozaty.index');
+        return view('admin.discover-lozaty.index',[
+            'flavors'     => Flavor::all(),
+            'overview'    => Overview::all(),
+            'composition' => Composition::all()
+        ]);
     }
 
     /**
