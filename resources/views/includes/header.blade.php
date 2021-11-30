@@ -373,7 +373,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="c pv40 mt20 soc" style="padding-bottom:0px; font-size: 13px; color: #ddd;"> <a href="https://www.lozaty.com/?lang=en">English</a>&emsp;|&emsp;<a href="https://www.lozaty.com/?lang=ar" style="font-family: 'ge_ss_twomedium';">عربي</a>
+			<div class="c pv40 mt20 soc" style="padding-bottom:0px; font-size: 13px; color: #ddd;"> <a href={{route('language',['locale'=>'en'])}}>English</a>&emsp;|&emsp;<a href={{route('language',['locale'=>'ar'])}} style="font-family: 'ge_ss_twomedium';">عربي</a>
 				<div class=mt15>
 					<a href="https://fb.com/LozatyArabia" target="_blank">
 						<div class="c hicon dark ml5"><i class="fa fa-facebook"></i></div> /LozatyArabia </a>
@@ -438,7 +438,7 @@
                             /LozatyArabia
                          </a>
                       </span> </div>
-						<div class="col r headfoa"><a href="https://www.lozaty.com/?lang=en">English</a>&emsp;|&emsp;<a href="https://www.lozaty.com/?lang=ar" style="font-family: 'ge_ss_twomedium';">عربي</a></div>
+						<div class="col r headfoa"><a href={{route('language',['locale'=>'en'])}}>English</a>&emsp;|&emsp;<a href={{route('language',['locale'=>'ar'])}} style="font-family: 'ge_ss_twomedium';">عربي</a></div>
 					</div>
 				</div>
 			</div>
