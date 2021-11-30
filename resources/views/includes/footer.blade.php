@@ -11,9 +11,9 @@
     <div class="mt20">
         <div class="tbl" style="direction: ltr;">
             <div class="col l w33 vt m_mt10">
-                <div class="footer-titil"> About Lozaty </div>
+                <div class="footer-titil"> {{__('About Lozaty')}} </div>
                 <p>
-                <p><span style="language:en-US"><span style="unicode-bidi:embed"><span style="word-break:normal"><span style="punctuation-wrap:hanging"><span style="font-size:16.0pt"><span style="font-family:Calibri"><span style="color:#0d0d0d"><span style="language:en-US"><span style="font-weight:bold">Lozaty&reg; refreshing lozenges&nbsp; are food supplements used for immediate relief of sore throat and/ or nasal congestion associated with respiratory conditions</span></span></span></span></span></span></span></span></span></p>
+                <p><span style="language:en-US"><span style="unicode-bidi:embed"><span style="word-break:normal"><span style="punctuation-wrap:hanging"><span style="font-size:16.0pt"><span style="font-family:Calibri"><span style="color:#0d0d0d"><span style="language:en-US"><span style="font-weight:bold">{{__('Lozaty refreshing lozenges are food supplements used for immediate relief of sore throat and/ or nasal congestion associated with respiratory conditions')}}</span></span></span></span></span></span></span></span></span></p>
                 </p>
             </div>
             <div class="col colSep20"></div>

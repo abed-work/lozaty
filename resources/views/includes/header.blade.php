@@ -340,36 +340,36 @@
 					</a>
 				</div>
 				<div class="g_nm w50 fs14 milos">
-					<div class="mb ez-f" id=discover_b_m><i><img src="{{asset('images/flavors.svg')}}" /></i>Discover Lozaty</div>
+					<div class="mb ez-f" id=discover_b_m><i><img src="{{asset('images/flavors.svg')}}" /></i>{{__('Discover Lozaty')}}</div>
 				</div>
 				<div class="g_nm w50 fs14 milos">
 					<a href="{{route('videos')}}">
-						<div class="mb ez-f" id=videos_b><i><img src="{{asset('images/videos.svg')}}" /></i>Videos</div>
+						<div class="mb ez-f" id=videos_b><i><img src="{{asset('images/videos.svg')}}" /></i>{{__('Videos')}}</div>
 					</a>
 				</div>
 				<div class="g_nm w50 fs14 milos">
 					<a href="{{route('global-presence')}}">
-						<div class="mb ez-f" id=gp_b><i><img src="{{asset('images/loc.svg')}}" /></i>Global Presence</div>
+						<div class="mb ez-f" id=gp_b><i><img src="{{asset('images/loc.svg')}}" /></i>{{__('Global Presence')}}</div>
 					</a>
 				</div>
 				<div class="g_nm w50 fs14 milos">
 					<a href="{{route('contact')}}">
-						<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/contact.svg')}}" /></i>Contact Us</div>
+						<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/contact.svg')}}" /></i>{{__('Contact Us')}}</div>
 					</a>
 				</div>
 				<div class="g_nm w50 fs14 kilos fh">
 					<a href="{{route('discover')}}/overview">
-						<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/flavors.svg')}}" /></i>Overview</div>
+						<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/flavors.svg')}}" /></i>{{__('Overview')}}</div>
 					</a>
 				</div>
 				<div class="g_nm w50 fs14 kilos fh">
 					<a href="{{route('discover')}}">
-						<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/flavors.svg')}}" /></i>Composits</div>
+						<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/flavors.svg')}}" /></i>{{__('Composits')}}</div>
 					</a>
 				</div>
 				<div class="g_nm w50 fs14 kilos fh">
 					<a href="{{route('discover')}}">
-						<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/flavors.svg')}}" /></i>Flavors</div>
+						<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/flavors.svg')}}" /></i>{{__('Flavors')}}</div>
 					</a>
 				</div>
 			</div>
@@ -507,27 +507,27 @@
 							<a href="{{route('home')}}">
 								<div class="mb ez-f" id=home_b><i><img src="{{asset('images/home.svg')}}" /></i>{{__('Home')}}</div>
 							</a>
-							<div class="mb ez-f mbA" id=discover_b> <a href="{{route('discover')}}"><i><img src="{{asset('images/flavors.svg')}}" /></i>Discover Lozaty</a>
+							<div class="mb ez-f mbA" id=discover_b> <a href="{{route('discover')}}"><i><img src="{{asset('images/flavors.svg')}}" /></i>{{__('Discover Lozaty')}}</a>
 								<div class="subM ez-f">
 									<a href="{{route('discover')}}">
-										<div class="subMb"><span class="mdi mdi-circle-medium"></span>Overview</div>
+										<div class="subMb"><span class="mdi mdi-circle-medium"></span>{{__('Overview')}}</div>
 									</a>
 									<a href="{{route('discover')}}">
-										<div class="subMb"><span class="mdi mdi-circle-medium"></span>Composits</div>
+										<div class="subMb"><span class="mdi mdi-circle-medium"></span>{{__('Composits')}}</div>
 									</a>
 									<a href="{{route('discover')}}">
-										<div class="subMb"><span class="mdi mdi-circle-medium"></span>Flavors</div>
+										<div class="subMb"><span class="mdi mdi-circle-medium"></span>{{__('Flavors')}}</div>
 									</a>
 								</div>
 							</div>
 							<a href="{{route('videos')}}">
-								<div class="mb ez-f" id=videos_b><i><img src="{{asset('images/videos.svg')}}" /></i>Videos</div>
+								<div class="mb ez-f" id=videos_b><i><img src="{{asset('images/videos.svg')}}" /></i>{{__('Videos')}}</div>
 							</a>
 							<a href="{{route('global-presence')}}">
-								<div class="mb ez-f" id=global-presence_b><i><img src="{{asset('images/loc.svg')}}" /></i>Global Presence</div>
+								<div class="mb ez-f" id=global-presence_b><i><img src="{{asset('images/loc.svg')}}" /></i>{{__('Global Presence')}}</div>
 							</a>
 							<a href="{{route('contact')}}">
-								<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/contact.svg')}}" /></i>Contact Us</div>
+								<div class="mb ez-f" id=contact_b><i><img src="{{asset('images/contact.svg')}}" /></i>{{__('Contact Us')}}</div>
 							</a>
 						</div>
 					</div>
