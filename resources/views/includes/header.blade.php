@@ -336,7 +336,7 @@
 			<div class="g_nm w80" style="direction: ltr;">
 				<div class="g_nm w50 fs14 milos">
 					<a href="{{route('home')}}">
-						<div class="mb ez-f" id=home_b><i><img src="{{asset('images/home.svg')}}" /></i>Home</div>
+						<div class="mb ez-f" id=home_b><i><img src="{{asset('images/home.svg')}}" /></i>{{__('Home')}}</div>
 					</a>
 				</div>
 				<div class="g_nm w50 fs14 milos">
@@ -505,7 +505,7 @@
 						</div>
 						<div class="col r m_h">
 							<a href="{{route('home')}}">
-								<div class="mb ez-f" id=home_b><i><img src="{{asset('images/home.svg')}}" /></i>Home</div>
+								<div class="mb ez-f" id=home_b><i><img src="{{asset('images/home.svg')}}" /></i>{{__('Home')}}</div>
 							</a>
 							<div class="mb ez-f mbA" id=discover_b> <a href="{{route('discover')}}"><i><img src="{{asset('images/flavors.svg')}}" /></i>Discover Lozaty</a>
 								<div class="subM ez-f">

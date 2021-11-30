@@ -54,6 +54,13 @@
                 }
             });
 
+            $('#images1').change(function(){
+                $("#frames1").html('');
+                for (var i = 0; i < $(this)[0].files.length; i++) {
+                    $("#frames1").append('<img src="'+window.URL.createObjectURL(this.files[i])+'" width="100px" height="100px"/>');
+                }
+            });
+
             $('.mobile-menu-icon').click(function(){
                 $('.side-bar').toggleClass('active-menu');
                 $('.mobile-menu-icon i').toggleClass('w-color');

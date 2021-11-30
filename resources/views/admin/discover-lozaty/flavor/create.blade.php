@@ -32,12 +32,12 @@
                 <span class="btn btn-primary btn-file">
                     <i class="fas fa-images"></i> 
                     <span class="image-label">Pop-up Image</span>
-                    <input type="file" id="images" name="pop_image" accept="image/gif, image/jpeg, image/png">
+                    <input type="file" id="images1" name="pop_image" accept="image/gif, image/jpeg, image/png">
                 </span>
                 @error('pop_image')
                     <div class="error-message">{{ $message }}</div>
                 @enderror
-                <div id="frames"> </div>
+                <div id="frames1" style="margin-top: 25px"> </div>
             </div>
 
             <div class="form-group ">
