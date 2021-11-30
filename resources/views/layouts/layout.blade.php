@@ -17,6 +17,9 @@
       <title>Lozaty - لوزتي</title>
       <link rel="icon" type="image/x-icon" href="" />
       <link href="{{asset('/css/style.css')}}" rel="stylesheet" type="text/css"/>
+      @if (Config::get('app.locale') == 'ar')
+         <link href="{{asset('/css/rtl.css')}}" rel="stylesheet" type="text/css"/>
+      @endif
       <link href="{{asset('/css/jquery-jvectormap-2.0.3.css')}}" rel="stylesheet" type="text/css"/>
       <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
    </head>

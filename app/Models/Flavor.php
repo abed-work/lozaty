@@ -10,7 +10,8 @@ class Flavor extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title',
+        'title_en',
+        'title_ar',
         'main_image',
         'pop_image'
     ];

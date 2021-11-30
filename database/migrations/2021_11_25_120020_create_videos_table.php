@@ -15,7 +15,8 @@ class CreateVideosTable extends Migration
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
+            $table->text('title_en');
+            $table->text('title_ar')->nullable();
             $table->text('featured_image');
             $table->text('link');
             $table->boolean('isFeatured')->default(0);

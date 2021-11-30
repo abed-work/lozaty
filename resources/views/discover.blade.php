@@ -8,7 +8,7 @@
 <div class=pv50>
     <div class="flexi" style="direction: ltr;">
         <div class="g w80 m_w100 l overviewC">
-            <div class=tit>Lozaty Overview</div>
+            <div class=tit>{{__('Lozaty Overview')}}</div>
             <div class="g_nm sep mt10"></div>
             <div class="txt mt20 l">
                 <p>

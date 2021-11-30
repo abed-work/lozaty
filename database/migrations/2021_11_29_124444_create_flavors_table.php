@@ -15,7 +15,8 @@ class CreateFlavorsTable extends Migration
     {
         Schema::create('flavors', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
+            $table->text('title_en');
+            $table->text('title_ar')->nullable();
             $table->text('main_image');
             $table->text('pop_image');
             $table->timestamps();

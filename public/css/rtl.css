@@ -1,0 +1,10 @@
+.tbl{
+    direction: rtl !important;
+}
+
+.l{
+    text-align: right;
+}
+.r{
+    text-align: left;
+}

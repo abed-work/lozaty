@@ -15,7 +15,7 @@ class CompositionSeeder extends Seeder
     public function run()
     {
         DB::table('compositions')->insert([
-            'description' => 
+            'description_en' => 
             '•Lozaty® lozenges  are food supplements contain natural active ingredients (menthol and eucalyptus)
              •Lozaty® Lozenges as food supplements; ensure high safety as they are Gluten free and Aspartame free
              '

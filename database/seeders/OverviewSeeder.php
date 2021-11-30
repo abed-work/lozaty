@@ -15,7 +15,7 @@ class OverviewSeeder extends Seeder
     public function run()
     {
         DB::table('overviews')->insert([
-            'description' => 
+            'description_en' => 
             'Lozaty® refreshing lozenges are food supplements used for immediate relief of sore throat and/ or nasal congestion associated with respiratory conditions such as:
 
                 Common Cold

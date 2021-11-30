@@ -13,7 +13,7 @@
         <thead>
             <th>#</th>
             <th>Featured Image</th>
-            <th>Title</th>
+            <th>Title EN</th>
             <th>Youtube Link Id</th>
             <th>Is Featured</th>
             <th>Operation</th>

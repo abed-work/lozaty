@@ -9,5 +9,8 @@ class Overview extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['description'];
+    protected $fillable = [
+        'description_en',
+        'description_ar',
+    ];
 }

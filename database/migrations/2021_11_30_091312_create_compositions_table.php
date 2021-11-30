@@ -15,7 +15,8 @@ class CreateCompositionsTable extends Migration
     {
         Schema::create('compositions', function (Blueprint $table) {
             $table->id();
-            $table->text('description');
+            $table->text('description_en');
+            $table->text('description_ar')->nullable();
             $table->timestamps();
         });
     }
