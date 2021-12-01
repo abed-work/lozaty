@@ -37,7 +37,7 @@ class FlavorController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'title'         => 'required',
+            'title_en'         => 'required',
             'main_image'    => 'required|image|',
             'pop_image'     => 'required|image|'
         ]);
@@ -63,7 +63,8 @@ class FlavorController extends Controller
         
         
         Flavor::create([
-            'title'         => $request->title,
+            'title_en'      => $request->title_en,
+            'title_ar'      => $request->title_ar,
             'main_image'    => $pop_image,
             'pop_image'     => $main_image
         ]);
@@ -114,7 +115,7 @@ class FlavorController extends Controller
         $flavor = Flavor::findOrFail($id);
 
         $this->validate($request,[
-            'title' => 'required'
+            'title_en' => 'required'
         ]);
 
         if ($request->hasFile('main_image')){
@@ -151,7 +152,8 @@ class FlavorController extends Controller
 
         }
         
-        $flavor->title = $request->title;
+        $flavor->title_en = $request->title_en;
+        $flavor->title_ar = $request->title_ar;
         
         $flavor->save();
 

@@ -11,7 +11,8 @@ class CompositionController extends Controller
     public function store(Request $request,$id){
         $composition = Composition::findOrFail($id);
 
-        $composition->description = $request->description;
+        $composition->description_en = $request->description_en;
+        $composition->description_ar = $request->description_ar;
 
         $composition->save();
 

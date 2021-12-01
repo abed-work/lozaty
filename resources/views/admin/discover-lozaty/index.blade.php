@@ -6,9 +6,14 @@
     <div class="card-body">
         <form action={{route('dashboard.overview',['id'=>$overview[0]->id])}} method="POST">
             @csrf
-            <textarea name="description" id="" cols="30" rows="10">
-{{$overview[0]->description}}
-            </textarea>
+            <div class="form-group">
+                <div class="label">Overview (EN)</div>
+                <textarea name="description_en" id="" cols="30" rows="10">{{$overview[0]->description_en}}</textarea>
+            </div>
+            <div class="form-group">
+                <div class="label">Overview (AR)</div>
+                <textarea name="description_ar" id="" cols="30" rows="10" placeholder="اكتب الشرح هنا" style="direction: rtl">{{$overview[0]->description_ar}}</textarea>
+            </div>
                 <input class="save-btn" type="submit" value="Save changes">
         </form>
     </div>
@@ -19,9 +24,14 @@
       <div class="card-body">
             <form action={{route('dashboard.composition',['id'=>$composition[0]->id])}} method="post">
                 @csrf
-                <textarea name="description" id="" cols="30" rows="10">
-{{$composition[0]->description}}
-                </textarea>
+                <div class="form-group">
+                    <div class="label">Composition (EN)</div>
+                    <textarea name="description_en" id="" cols="30" rows="10">{{$composition[0]->description_en}}</textarea>
+                </div>
+                <div class="form-group">
+                    <div class="label">Composition (AR)</div>
+                    <textarea style="direction: rtl" name="description_ar" id="" cols="30" rows="10">{{$composition[0]->description_ar}}</textarea>
+                </div>
                 <div><input class="save-btn" type="submit" value="Save changes"></div>
             </form>
       </div>
@@ -39,7 +49,8 @@
               <thead>
                   <tr>
                       <th>#</th>
-                      <th>Title</th>
+                      <th>Title (EN)</th>
+                      <th>Title (AR)</th>
                       <th>Main Image</th>
                       <th>Pop-Up Image</th>
                       <th>Operation</th>
@@ -49,7 +60,8 @@
                   @foreach ($flavors as $flavor)
                     <tr>
                         <td>{{$loop->iteration}}</td>
-                        <td>{{$flavor->title}}</td>
+                        <td>{{$flavor->title_en}}</td>
+                        <td>{{$flavor->title_ar}}</td>
                         <td><img src="{{asset('storage/images/'.$flavor->main_image)}}" alt="" width="50px" height="50px"></td>
                         <td><img src="{{asset('storage/images/'.$flavor->pop_image)}}" alt="" width="50px" height="50px"></td>
                         <td class="operation">

@@ -13,16 +13,16 @@
 		<div class=pv50>
 			<div class=flexi style="direction: ltr;">
 				<div class="g w80 m_w100 l">
-					<div class=tit>Global Presence</div>
+					<div class=tit>{{__('Global Presence')}}</div>
 					<div class="g_nm sep"></div>
 					<div class="txt mt10 l">
-						<p><span style="font-size:18px;"><span style="font-family:Calibri"><span style="color:black">Lozaty&reg; is available in leading pharmacies and Hyper Markets in:</span></span>
+						<p><span style="font-size:18px;"><span style="font-family:Calibri"><span style="color:black">{{__('Lozaty is available in leading pharmacies and Hyper Markets in:')}}</span></span>
 							</span>
 						</p>
 						<p>
 							<div id="world-map-gdp" style="height: 400px;"></div>
 						</p>
-						<p><span style="font-size:18px;"><span style="font-family:Calibri"><span style="color:black">If you want to represent&nbsp;Lozaty&reg; in your country, contact us at <a href="mailto:lozaty@lozaty.com?subject=Country%20Representative">lozaty@lozaty.com</a></span></span>
+						<p><span style="font-size:18px;"><span style="font-family:Calibri"><span style="color:black">{{__('If you want to represent Lozaty in your country, contact us at')}} <a href="mailto:lozaty@lozaty.com?subject=Country%20Representative">lozaty@lozaty.com</a></span></span>
 							</span>
 						</p>
 					</div>

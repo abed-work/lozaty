@@ -12,16 +12,16 @@
             <div class="g_nm sep mt10"></div>
             <div class="txt mt20 l">
                 <p>
-                   <div style="white-space: pre-wrap;font-size:16px;font-family:Calibri;font-weight:bold;color:#0d0d0d">{{$overview[0]->description}}</div>
+                   <div style="white-space: pre-wrap;font-size:16px;font-family:Calibri;font-weight:bold;color:#0d0d0d">{{(Config::get('app.locale') == 'en' ? $overview[0]->description_en:$overview[0]->description_ar)}}</div>
                 </p>
             </div>
         </div>
         <div class="g w80 m_w100 mt30 l compositionC">
-            <div class=tit>Composition</div>
+            <div class=tit>{{__('Composition')}}</div>
             <div class="g_nm sep mt10"></div>
             <div class="txt mt20 l">
                 <p style="margin-top: 10pt; margin-bottom: 0pt; margin-left: 0.25in;"><span style="font-size:16px;"><span style="line-height:90%"><span style="unicode-bidi:embed"><span style="word-break:normal"><span style="font-family:Arial"></span></span>
-                    <div style="white-space: pre-wrap;font-size:16px;font-family:Calibri;color:#0d0d0d">{{$composition[0]->description}}</div>
+                    <div style="white-space: pre-wrap;font-size:16px;font-family:Calibri;color:#0d0d0d">{{(Config::get('app.locale') == 'en' ? $composition[0]->description_en : $composition[0]->description_ar)}}</div>
                 </p>
                 <div class="O1" style="margin-top:5.0pt; margin-bottom:0pt; margin-left:.75in; text-align:left">&nbsp;</div>
                 <div class="O1" style="margin-top:5.0pt; margin-bottom:0pt; margin-left:.75in; text-align:left">&nbsp;</div>
@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="g w80 m_w100 mt30 l flavorsC">
-            <div class="tit">Discover Lozaty Flavors</div>
+            <div class="tit">{{__('Discover Lozaty Flavors')}}</div>
             <div class="sep mt20 g_nm"></div>
             <div class="mt20 m_mt10 c">
                 <div class=tbl>
@@ -47,7 +47,7 @@
                             <div class="col w33 flavorC pointer">
                                 <div class="flavors_img m_mt30" data-i="{{asset('storage/images/'.$flavor->main_image)}}" style="background: URL('storage/images/{{$flavor->pop_image}}') no-repeat center center/contain;"></div>
                                 <div class=mt10>
-                                    <div class=flavors_tit>{{$flavor->title}}</div>
+                                    <div class=flavors_tit>{{(Config::get('app.locale') == 'en' ? $flavor->title_en : $flavor->title_ar)}}</div>
                                     <div class="flavors_txt mt20 fh"></div>
                                 </div>
                             </div>

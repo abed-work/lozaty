@@ -8,9 +8,17 @@
             @csrf
             @method('PUT')
             <div class="form-group">
-                <div class="label">Video Title</div>
-                <input type="text" name="video_title" id="" placeholder="Video 1" value="{{$video->title}}">
-                @error('category_name')
+                <div class="label">Video Title (EN)</div>
+                <input type="text" name="video_title_en" id="" placeholder="Video 1" value="{{$video->title_en}}">
+                @error('video_title_en')
+                    <div class="error-message">{{ $message }}</div>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                <div class="label">Video Title (AR)</div>
+                <input type="text" name="video_title_ar" id="" placeholder="عنوان الفيديو" value="{{$video->title_ar}}" style="direction: rtl">
+                @error('video_title_ar')
                     <div class="error-message">{{ $message }}</div>
                 @enderror
             </div>

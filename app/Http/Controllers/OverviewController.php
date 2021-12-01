@@ -12,7 +12,8 @@ class OverviewController extends Controller
     public function store(Request $request,$id){
         $overview = Overview::findOrFail($id);
 
-        $overview->description = $request->description;
+        $overview->description_en = $request->description_en;
+        $overview->description_ar = $request->description_ar;
 
         $overview->save();
 

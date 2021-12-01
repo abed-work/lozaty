@@ -35,7 +35,7 @@ class VideoController extends Controller
     {
 
         $this->validate($request,[
-            'video_title'=>'required',
+            'video_title_en'=>'required',
             'video_id'=>'required',
             'video_image'=>'required|image'
         ]);
@@ -51,7 +51,8 @@ class VideoController extends Controller
         }
 
         Video::create([
-            'title'             =>  $request->video_title,
+            'title_en'          =>  $request->video_title_en,
+            'title_ar'          =>  $request->video_title_ar,
             'featured_image'    =>  $filenameToStore,
             'link'              =>  $request->video_id,
             'isFeatured'        => ($request->is_featured ? 1:0)
@@ -100,7 +101,7 @@ class VideoController extends Controller
         $video = Video::findOrFail($id);
 
         $this->validate($request,[
-            'video_title'=>'required',
+            'video_title_en'=>'required',
             'video_link'=>'required'
         ]);
 
@@ -117,9 +118,10 @@ class VideoController extends Controller
 
             if (file_exists(storage_path().'/app/public/images/'.$video->featured_image))
                 unlink(storage_path().'/app/public/images/'.$video->featured_image);
-            }
+        }
 
-        $video->title = $request->video_title;
+        $video->title_en = $request->video_title_en;
+        $video->title_ar = $request->video_title_ar;
         $video->featured_image = ($filenameToStore == NULL ? $video->featured_image:$filenameToStore);
         $video->link = $request->video_link;
         $video->isFeatured = ($request->is_featured ? 1:0);
@@ -144,7 +146,6 @@ class VideoController extends Controller
 
         $video->delete();
 
-        return redirect()-route('dashboard.videos.index');
-
+        return redirect()->route('dashboard.videos.index');
     }
 }

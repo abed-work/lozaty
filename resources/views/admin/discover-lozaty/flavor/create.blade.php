@@ -7,9 +7,17 @@
         <form action="{{route('dashboard.flavors.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <div class="label">Title</div>
-                <input type="text" name="title" id="" placeholder="Orange">
-                @error('title')
+                <div class="label">Title (EN)</div>
+                <input type="text" name="title_en" id="" placeholder="Orange">
+                @error('title_en')
+                    <div class="error-message">{{ $message }}</div>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                <div class="label">Title (AR)</div>
+                <input type="text" name="title_ar" id="" placeholder="بنكهة الليمون" style="direction: rtl">
+                @error('title_ar')
                     <div class="error-message">{{ $message }}</div>
                 @enderror
             </div>

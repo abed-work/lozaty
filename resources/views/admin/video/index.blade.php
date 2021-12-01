@@ -13,7 +13,8 @@
         <thead>
             <th>#</th>
             <th>Featured Image</th>
-            <th>Title EN</th>
+            <th>Title (EN)</th>
+            <th>Title (AR)</th>
             <th>Youtube Link Id</th>
             <th>Is Featured</th>
             <th>Operation</th>
@@ -23,7 +24,8 @@
                 <tr>
                     <td>{{$loop->iteration}}</td>
                     <td><img src="{{asset('storage/images/'.$video->featured_image)}}" alt="" width="50px" height="50px"></td>
-                    <td>{{$video->title}}</td>
+                    <td>{{$video->title_en}}</td>
+                    <td>{{$video->title_ar}}</td>
                     <td>{{$video->link}}</td>
                     <td>
                       @if ($video->isFeatured)

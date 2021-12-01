@@ -7,7 +7,7 @@
 <div style="background: #81729C; height: 4px;"></div>
 <section style="background: #fff; padding: 50px 0px;">
 	<div class="flexi" style="direction: ltr;">
-		<div class="tit">Contact Us</div>
+		<div class="tit">{{__('Contact Us')}}</div>
 		<div class="g_nm sep mt20"></div>
 		<br>
 		<div class="txt mt10 c g_nm w50 m_w100">
@@ -24,7 +24,7 @@
 						</div>
 					</div>
 					<div class="col w50 vt">
-						<div class="main_tit m_mt60 l m_c">Contact Us</div>
+						<div class="main_tit m_mt60 l m_c">{{__('Contact Us')}}</div>
 						<div class="main_txt l m_c"></div>
 						<div class="mt30">
 							<form id="contForm" method="post">
@@ -32,25 +32,25 @@
 									<div class="row">
 										<div class="col w50">
 											<div class="frm2">
-												<input class="rinput ez-f" type="text" name="Name" id="Name" value="" title="Name" placeholder="Name..">
+												<input class="rinput ez-f" type="text" name="Name" id="Name" value="" title="Name" placeholder="{{(Config::get('app.locale') == 'en'?'Name..':'الاسم')}}">
 											</div>
 										</div>
 										<div class="col" style="min-width: 10px; width: 10px;"></div>
 										<div class="col w50 l">
 											<div class="frm2 m_mt10">
-												<input class="rinput ez-f" type="Email" name="Email" id="Email" value="" title="Email Address" placeholder="Email Address..">
+												<input class="rinput ez-f" type="Email" name="Email" id="Email" value="" title="Email Address" placeholder="{{(Config::get('app.locale') == 'en'?'Email Address..':'البريد الالكتروني')}}">
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="frm2 mt10">
-									<input class="rinput ez-f" type="Subject" name="Subject" id="Subject" value="" title="Subject" placeholder="Subject..">
+									<input class="rinput ez-f" type="Subject" name="Subject" id="Subject" value="" title="Subject" placeholder="{{(Config::get('app.locale') == 'en'?'Subject..':'الموضوع')}}">
 								</div>
 								<div class="frm2 mt10" style="">
-									<textarea class="rinput ez-f" name="Message" id="Message" placeholder="Message.." style="color: #606060; height: 140px; font-size: 15px; padding: 10px; line-height: 20px; background: transparent; outline: none; display: block; margin-top: 10px; resize: none;"></textarea>
+									<textarea class="rinput ez-f" name="Message" id="Message" placeholder="{{(Config::get('app.locale') == 'en'?'Message..':'الرسالة')}}" style="color: #606060; height: 140px; font-size: 15px; padding: 10px; line-height: 20px; background: transparent; outline: none; display: block; margin-top: 10px; resize: none;"></textarea>
 								</div>
 								<div class="mt10 l m_l">
-									<button id="submit" type="submit" class="pointer c_btn_primary ez-f" data-action="Send" data-loading="Loading...">Send</button>
+									<button id="submit" type="submit" class="pointer c_btn_primary ez-f" data-action="Send" data-loading="Loading...">{{(Config::get('app.locale') == 'en'?'Send':'ارسل')}}</button>
 								</div>
 							</form>
 						</div>

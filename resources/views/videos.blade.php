@@ -37,12 +37,12 @@
 
 <div id="header" style="background: URL('images/bg.jpg') scroll repeat center center/cover; direction: ltr; padding: 100px 0px; padding-top: 141px;">
 	<div class="pa w100 flipHoriz" style="left: 0px; top: 0px; max-width: 600px; height: 240px; background: URL('/images/hbgl.png') scroll no-repeat left top/contain;"></div>
-	<div class=ov style="background: rgba(255,255,255,0.2);"></div><span class=fh><div class=pageTit><h3>Videos</h3></div><nav aria-label="breadcrumb"><ol class="breadcrumb site-breadcumb-1 justify-content-center"><li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li><li class="breadcrumb-item active" aria-current="page">Videos</li></ol></nav></span></div>
+	<div class=ov style="background: rgba(255,255,255,0.2);"></div><span class=fh><div class=pageTit><h3>{{__('Videos')}}</h3></div><nav aria-label="breadcrumb"><ol class="breadcrumb site-breadcumb-1 justify-content-center"><li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li><li class="breadcrumb-item active" aria-current="page">Videos</li></ol></nav></span></div>
 <div style="background: #81729C; height: 4px;"></div>
 <div class=pv50>
 	<div class=flexi style="direction: ltr;">
 		<div class="g w80 m_w100 l">
-			<div class="tit">Videos</div>
+			<div class="tit">{{__('Videos')}}</div>
 			<div class="sep g_nm"></div>
 			<div class="mt50 m_mt20 c">
 				<div class=tbl style="direction: ltr;">
@@ -61,7 +61,7 @@
 						<div class="g_nm w33 md_w50 m_w100">
 							<div style="margin:5px;" class="vBox pointer" vid="{{$video->link}}">
 								<div class="vImg" style="background-image: URL('storage/images/{{$video->featured_image}}');"></div>
-								<div class=vTit>{{$video->title}}</div>
+								<div class=vTit>{{(Config::get('app.locale') == 'en'? $video->title_en:$video->title_ar)}}</div>
 							</div>
 						</div>			
 					@endforeach
