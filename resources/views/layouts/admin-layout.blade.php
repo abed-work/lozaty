@@ -45,7 +45,7 @@
 
             $(".chosen-select").chosen({
                 no_results_text: "Oops, nothing found!"
-            })
+            });
 
             $('#images').change(function(){
                 $("#frames").html('');
@@ -65,6 +65,7 @@
                 $('.side-bar').toggleClass('active-menu');
                 $('.mobile-menu-icon i').toggleClass('w-color');
             });
+
         });
     </script>
 </body>
