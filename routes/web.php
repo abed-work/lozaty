@@ -8,6 +8,8 @@ use App\Http\Controllers\VideoController;
 use App\Http\Controllers\GlobalPresenceController;
 use App\Http\Controllers\OverviewController;
 use App\Http\Controllers\CompositionController;
+use App\Http\Controllers\ContactController;
+
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Video;
@@ -71,6 +73,8 @@ Route::get('/contact-us', function () {
 
 Route::get('/login', [AuthController::class,'index'])->name('login');
 Route::post('/login', [AuthController::class,'authenticate']);
+
+Route::post('/send-mail', [ContactController::class,'sendMail']);
 
 
 Route::middleware('auth')->prefix('dashboard')->name('dashboard.')->group(function () {

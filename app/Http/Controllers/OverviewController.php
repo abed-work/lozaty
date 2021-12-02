@@ -19,6 +19,6 @@ class OverviewController extends Controller
 
         return redirect()
                 ->route('dashboard.discover-lozaty.index')
-                ->with('success','Info has been saved!');;
+                ->with('success','Info has been saved!');
     }
 }

@@ -39,7 +39,7 @@
                     <span class="image-label">Featured Image</span>
                     <input type="file" id="images" name="video_image" accept="image/gif, image/jpeg, image/png">
                 </span>
-                @error('category_image')
+                @error('video_image')
                     <div class="error-message">{{ $message }}</div>
                 @enderror
                 <div id="frames"> </div>

@@ -9,7 +9,7 @@
             <div class="form-group">
                 <div class="label">Video Title (EN)</div>
                 <input type="text" name="video_title_en" id="" placeholder="Video 1">
-                @error('video_title')
+                @error('video_title_en')
                     <div class="error-message">{{ $message }}</div>
                 @enderror
             </div>
@@ -25,6 +25,9 @@
             <div class="form-group">
                 <div class="label">Youtube video id</div>
                 <input type="text" name="video_id" id="" placeholder="Hf07tAkyCvM">
+                @error('video_id')
+                    <div class="error-message">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="form-group checkbox-parent">
@@ -38,7 +41,7 @@
                     <span class="image-label">Featured Image</span>
                     <input type="file" id="images" name="video_image" accept="image/gif, image/jpeg, image/png">
                 </span>
-                @error('category_image')
+                @error('video_image')
                     <div class="error-message">{{ $message }}</div>
                 @enderror
                 <div id="frames"> </div>
