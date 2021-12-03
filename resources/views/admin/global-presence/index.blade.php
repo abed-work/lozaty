@@ -216,7 +216,6 @@
             {"name":"Iraq","code":"IQ"},
             {"name":"Ireland","code":"IE"},
             {"name":"Isle of Man","code":"IM"},
-            {"name":"Israel","code":"IL"},
             {"name":"Italy","code":"IT"},
             {"name":"Jamaica","code":"JM"},
             {"name":"Japan","code":"JP"},
@@ -279,7 +278,7 @@
             {"name":"Oman","code":"OM"},
             {"name":"Pakistan","code":"PK"},
             {"name":"Palau","code":"PW"},
-            {"name":"Palestinian Territory, Occupied","code":"PS"},
+            {"name":"Palestine","code":"PS"},
             {"name":"Panama","code":"PA"},
             {"name":"Papua New Guinea","code":"PG"},
             {"name":"Paraguay","code":"PY"},
@@ -1137,9 +1136,6 @@
             if(gdpData[code]) el.css('opacity', 1).html(el.html() + ' - Available');
             else el.css('opacity', 1).html('If you want to be a distributer in ' + el.html() + ', Contact Us')
         },
-        onRegionClick: function(e, code) {
-            if(!gdpData[code]) window.location.href = 'https://www.lozaty.com/contact'
-        }
         });
         viewsec('global-presence', 'global-presence', 'global-presence', 'global-presence');
     </script>

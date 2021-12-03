@@ -20,7 +20,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->route('dashboard.home');
+            return redirect()->to('dashboard/discover-lozaty');
         }
 
         return back()->withErrors(['The provided credentials do not match our records.']);
