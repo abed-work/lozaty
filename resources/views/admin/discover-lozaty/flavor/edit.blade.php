@@ -24,7 +24,7 @@
             </div>
 
             <div class="form-group image-parent">
-                <div class="label">Main Image</div>
+                <div class="label">Main Image (max size 500 KB)</div>
                 <span class="btn btn-primary btn-file">
                     <i class="fas fa-images"></i> 
                     <span class="image-label">Main Image</span>
@@ -38,7 +38,7 @@
             </div>
 
             <div class="form-group image-parent">
-                <div class="label">Pop-up Image</div>
+                <div class="label">Pop-up Image (max size 500 KB)</div>
                 <span class="btn btn-primary btn-file">
                     <i class="fas fa-images"></i> 
                     <span class="image-label">Pop-up Image</span>

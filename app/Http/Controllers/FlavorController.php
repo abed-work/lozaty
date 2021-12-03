@@ -38,8 +38,8 @@ class FlavorController extends Controller
     {
         $this->validate($request,[
             'title_en'         => 'required',
-            'main_image'    => 'required|image|',
-            'pop_image'     => 'required|image|'
+            'main_image'       => 'required|image|max:500',
+            'pop_image'        => 'required|image|max:500'
         ]);
 
         $main_image=null;
@@ -115,7 +115,9 @@ class FlavorController extends Controller
         $flavor = Flavor::findOrFail($id);
 
         $this->validate($request,[
-            'title_en' => 'required'
+            'title_en'      => 'required',
+            'main_image'    => 'image|max:500',
+            'pop_image'     => 'image|max:500'
         ]);
 
         if ($request->hasFile('main_image')){

@@ -1,9 +1,8 @@
 @extends('layouts.admin-layout')
-
 @section('body')
   <div class="card">
       <div class="card-header">
-        {{$flavor->title}}
+        {{$flavor->title_en}} |  {{$flavor->title_ar}}
       </div>
       <div class="card-body">
         <h5>Main Image</h5>

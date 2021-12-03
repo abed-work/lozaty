@@ -38,7 +38,7 @@
             <div class="form-group image-parent">
                 <span class="btn btn-primary btn-file">
                     <i class="fas fa-images"></i> 
-                    <span class="image-label">Featured Image</span>
+                    <span class="image-label">Featured Image (max size 500 KB)</span>
                     <input type="file" id="images" name="video_image" accept="image/gif, image/jpeg, image/png">
                 </span>
                 @error('video_image')

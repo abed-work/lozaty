@@ -283,6 +283,10 @@ table .delete-form button {
     border: 1px solid #d4d4d4;
 }
 
+.image-parent .error-message{
+    margin-top: 15px;
+}
+
 .image-parent {
     margin-top: 35px;
 }

@@ -37,7 +37,7 @@ class VideoController extends Controller
         $this->validate($request,[
             'video_title_en'=>'required',
             'video_id'=>'required',
-            'video_image'=>'required|image'
+            'video_image'=>'required|image|max:500'
         ]);
 
         $filenameToStore=NULL;  
@@ -102,7 +102,8 @@ class VideoController extends Controller
 
         $this->validate($request,[
             'video_title_en'=>'required',
-            'video_link'=>'required'
+            'video_link'=>'required',
+            'video_image'=>'image|max:500'
         ]);
 
         $filenameToStore=NULL;  
